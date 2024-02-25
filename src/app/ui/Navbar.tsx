@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const NavBar = () => {
   return (
@@ -48,34 +50,38 @@ const NavBar = () => {
           </div>
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-center">
-              <img
+              <Link href="/">
+              <Image
                 className="h-auto w-10"
                 src="/images/jgxdev_logo.png"
                 alt="jgxdev"
+                width={500}
+                height={500}
               />
+              </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 
-                <a
-                  href="#"
+                <Link
+                  href="/projects"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Projectos
-                </a>
-                <a
+                </Link>
+                <Link
                   href="#"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Contacto
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7078460407316635648"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   target="_blank"
                 >
                   Newsletter
-                </a>
+                </Link>
               </div>
             </div>
           </div>
