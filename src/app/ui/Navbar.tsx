@@ -63,7 +63,7 @@ const NavBar = () => {
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 
-                <Link
+                {/* <Link
                   href="/projects"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
@@ -74,7 +74,7 @@ const NavBar = () => {
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Contacto
-                </Link>
+                </Link> */}
                 <Link
                   href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7078460407316635648"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
