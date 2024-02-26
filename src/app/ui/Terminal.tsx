@@ -9,8 +9,13 @@ import Terminal, {
 const TerminalController = (props = {}) => {
   const initialState = useMemo(
     () => [
-      <TerminalOutput>Terminal en construcción</TerminalOutput>,
-      <TerminalOutput>Puedes interactuar, al menos escribiendo un mensaje:</TerminalOutput>,
+      <TerminalOutput>Por medio de esta terminal puedes solicitar información de José Germán</TerminalOutput>,
+      <TerminalOutput>
+        Comandos disponibles:
+      </TerminalOutput>,
+      <TerminalOutput>
+        - cv: Descargar el CV de José Germán
+      </TerminalOutput>,
       <TerminalOutput></TerminalOutput>,
     ],
     []
@@ -19,23 +24,46 @@ const TerminalController = (props = {}) => {
   const [terminalLineData, setTerminalLineData] = useState(initialState);
   // Terminal has 100% width by default so it should usually be wrapped in a container div
 
-//   const [terminalInputValue, setTerminalInputValue] = useState("");
+  //   const [terminalInputValue, setTerminalInputValue] = useState("");
 
   useEffect(() => {
     setTerminalLineData(initialState);
   }, [initialState]);
 
   const onInput = (input: string) => {
-    let ld = [...terminalLineData]
-    ld.push(<TerminalInput>{input}</TerminalInput>)
-    setTerminalLineData(ld)
-  }
+    let ld = [...terminalLineData];
+    ld.push(<TerminalInput>{input}</TerminalInput>);
 
-//   (terminalInput) =>{
-//     console.log(`New terminal input received: '${terminalInput}'`)
-//     setTerminalLineData([...terminalLineData, <TerminalOutput>{terminalInput}</TerminalOutput>])
-//   }
+    switch (input.toLocaleLowerCase()) {
+      case "hola":
+        ld.push(<TerminalOutput>Hola, ¿cómo estás?</TerminalOutput>);
+        break;
+      case "adios":
+        ld.push(<TerminalOutput>Adiós, que tengas un buen día</TerminalOutput>);
+        break;
+      case "cv":
+        let anchor = document.createElement("a");
+        anchor.href = "/cv_jose_martinez.pdf";
+        anchor.target = "_blank";
+        anchor.download = "cv_jose_martinez.pdf";
+        anchor.click();
+        ld.push(<TerminalOutput>CV Descargado con éxito</TerminalOutput>);
+        break;
+      default:
+        ld.push(
+          <TerminalOutput>
+            Lo siento, no entiendo lo que quieres decir
+          </TerminalOutput>
+        );
+        break;
+    }
+    setTerminalLineData(ld);
+  };
 
+  //   (terminalInput) =>{
+  //     console.log(`New terminal input received: '${terminalInput}'`)
+  //     setTerminalLineData([...terminalLineData, <TerminalOutput>{terminalInput}</TerminalOutput>])
+  //   }
 
   return (
     <div className="container">
