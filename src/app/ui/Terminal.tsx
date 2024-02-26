@@ -9,7 +9,7 @@ import Terminal, {
 const TerminalController = (props = {}) => {
   const initialState = useMemo(
     () => [
-      <TerminalOutput>En esta terminal puedes solicitar información de José Germán</TerminalOutput>,
+      <TerminalOutput>Puedes solicitar información de José Germán:</TerminalOutput>,
       <TerminalOutput>
         Comandos disponibles:
       </TerminalOutput>,
@@ -39,6 +39,8 @@ const TerminalController = (props = {}) => {
     ld.push(<TerminalInput>{input}</TerminalInput>);
 
     switch (input.toLocaleLowerCase()) {
+      case "":
+        break;
       case "hola":
         ld.push(<TerminalOutput>Hola, ¿cómo estás?</TerminalOutput>);
         break;
