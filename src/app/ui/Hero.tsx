@@ -1,7 +1,28 @@
+'use client'
+
 import Link from "next/link"
+import React from "react"
+import Typed from "typed.js"
 
 
 const Hero = () => {
+
+  const el = React.useRef(null);
+
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ['Frontend', 'Backend', 'Fullstack'],
+      typeSpeed: 100,
+      loop: true,
+      showCursor: false
+    });
+    
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="relative isolate px-6 pt-2 lg:px-8">
     <div
@@ -21,7 +42,7 @@ const Hero = () => {
       </div>
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-          Full Stack Developer
+         <span ref={el}></span> Developer
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-600">
           Hola. bienvenido a mi sitio web. Soy desarrollador de software full stack
