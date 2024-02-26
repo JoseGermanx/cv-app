@@ -9,7 +9,7 @@ import Terminal, {
 const TerminalController = (props = {}) => {
   const initialState = useMemo(
     () => [
-      <TerminalOutput>Por medio de esta terminal puedes solicitar información de José Germán</TerminalOutput>,
+      <TerminalOutput>En esta terminal puedes solicitar información de José Germán</TerminalOutput>,
       <TerminalOutput>
         Comandos disponibles:
       </TerminalOutput>,
