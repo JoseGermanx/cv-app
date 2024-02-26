@@ -1,4 +1,3 @@
-'use client'
 import Image from "next/image";
 import NavBar from "./ui/Navbar";
 import Hero from "./ui/Hero";
