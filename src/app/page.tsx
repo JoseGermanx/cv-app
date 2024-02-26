@@ -12,7 +12,7 @@ export default function Home() {
     <NavBar />
       <main className="flex min-h-screen flex-col items-center justify-between p-3">
         <Hero />
-        <div className=" w-2/3 ">
+        <div className="w-2/3">
         <TerminalController />
         </div>
         <TechStack />
