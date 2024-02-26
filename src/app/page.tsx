@@ -11,7 +11,7 @@ export default function Home() {
     <NavBar />
       <main className="flex min-h-screen flex-col items-center justify-between p-3">
         <Hero />
-        <div className="w-2/3">
+        <div className="lg:w-2/3 sm:w-4/5">
         <TerminalController />
         </div>
         <TechStack />
