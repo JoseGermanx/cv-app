@@ -9,7 +9,8 @@ import Terminal, {
 const TerminalController = (props = {}) => {
   const initialState = useMemo(
     () => [
-      <TerminalOutput>...</TerminalOutput>,
+      <TerminalOutput>Terminal en construcción</TerminalOutput>,
+      <TerminalOutput>Puedes interactuar, al menos escribiendo un mensaje:</TerminalOutput>,
       <TerminalOutput></TerminalOutput>,
     ],
     []
@@ -24,15 +25,24 @@ const TerminalController = (props = {}) => {
     setTerminalLineData(initialState);
   }, [initialState]);
 
+  const onInput = (input: string) => {
+    let ld = [...terminalLineData]
+    ld.push(<TerminalInput>{input}</TerminalInput>)
+    setTerminalLineData(ld)
+  }
+
+//   (terminalInput) =>{
+//     console.log(`New terminal input received: '${terminalInput}'`)
+//     setTerminalLineData([...terminalLineData, <TerminalOutput>{terminalInput}</TerminalOutput>])
+//   }
+
+
   return (
     <div className="container">
       <Terminal
         name="Bienvenido a la terminal de jgxdev"
         colorMode={ColorMode.Dark}
-        onInput={(terminalInput) =>{
-          console.log(`New terminal input received: '${terminalInput}'`)
-          setTerminalLineData([...terminalLineData, <TerminalOutput>{terminalInput}</TerminalOutput>])
-        }}
+        onInput={onInput}
       >
         {terminalLineData}
       </Terminal>
