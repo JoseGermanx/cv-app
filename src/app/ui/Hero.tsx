@@ -11,10 +11,11 @@ const Hero = () => {
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Frontend', 'Backend', 'Fullstack'],
+      strings: ['FullStack', 'Frontend', 'Backend'],
       typeSpeed: 100,
       loop: true,
-      showCursor: false
+      showCursor: false,
+      backDelay: 1000,
     });
     
     return () => {
