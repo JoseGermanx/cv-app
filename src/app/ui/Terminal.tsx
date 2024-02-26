@@ -117,12 +117,12 @@ const TerminalController = (props = {}) => {
   //   }
 
   return (
-    <div className="container">
+    <div className="container text-sm">
       <Terminal
         name="Bienvenido a la terminal de jgxdev"
         colorMode={ColorMode.Dark}
         onInput={onInput}
-        height="50vh"
+        height="60vh"
       >
         {terminalLineData}
       </Terminal>
