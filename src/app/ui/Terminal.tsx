@@ -43,6 +43,7 @@ const TerminalController = (props = {}) => {
         name="Bienvenido a la terminal de jgxdev"
         colorMode={ColorMode.Dark}
         onInput={onInput}
+        height="50vh"
       >
         {terminalLineData}
       </Terminal>
