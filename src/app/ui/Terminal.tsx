@@ -16,6 +16,10 @@ const TerminalController = (props = {}) => {
       <TerminalOutput>
         - cv: Descargar el CV de José Germán
       </TerminalOutput>,
+      <TerminalOutput>- nl: Ir a la newsletter</TerminalOutput>,
+      <TerminalOutput>- stack: Tecnologías con las que trabaja José Germán</TerminalOutput>,
+      <TerminalOutput>----</TerminalOutput>,
+      <TerminalOutput>- clear: Limpiar la terminal</TerminalOutput>,
       <TerminalOutput></TerminalOutput>,
     ],
     []
@@ -49,10 +53,57 @@ const TerminalController = (props = {}) => {
         anchor.click();
         ld.push(<TerminalOutput>CV Descargado con éxito</TerminalOutput>);
         break;
+        case "nl":
+        let nl = document.createElement("a");
+        nl.href = "https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7078460407316635648";
+        nl.target = "_blank";
+        nl.click();
+        ld.push(<TerminalOutput>Newsletter</TerminalOutput>);
+        break;
+        case "stack":
+        ld.push(<TerminalOutput>Tecnologías con las que trabaja José Germán:</TerminalOutput>);
+        ld.push(<TerminalOutput>Frontend: React, Next.js</TerminalOutput>);
+        ld.push(<TerminalOutput>Backend: Node.js, Express, Nest.js, Spring Boot, flask</TerminalOutput>);
+        ld.push(<TerminalOutput>Base de datos: MongoDB, MySQL, PostgreSQL</TerminalOutput>);
+        ld.push(<TerminalOutput>Cloud: AWS, Azure</TerminalOutput>);
+        ld.push(<TerminalOutput>DevOps: Docker</TerminalOutput>);
+        ld.push(<TerminalOutput>Testing: Jest</TerminalOutput>);
+        ld.push(<TerminalOutput>Mobile: React Native</TerminalOutput>);
+        break;
+        case "clear":
+        ld = [];
+        break;
+        case "help":
+        ld.push(
+          <TerminalOutput>
+            Comandos disponibles:
+          </TerminalOutput>
+        );
+        ld.push(
+          <TerminalOutput>
+            - cv: Descargar el CV de José Germán
+          </TerminalOutput>
+        );
+        ld.push(
+          <TerminalOutput>- nl: Ir a la newsletter</TerminalOutput>
+        );
+        ld.push(
+          <TerminalOutput>- stack: Tecnologías con las que trabaja José Germán</TerminalOutput>
+        );
+        ld.push(
+          <TerminalOutput>----</TerminalOutput>
+        );
+        ld.push(
+          <TerminalOutput>- clear: Limpiar la terminal</TerminalOutput>
+        );
+        ld.push(
+          <TerminalOutput></TerminalOutput>
+        );
+        break;
       default:
         ld.push(
           <TerminalOutput>
-            Lo siento, no entiendo lo que quieres decir
+            Lo siento, no entiendo lo que quieres decir. Escribe "help" para ver los comandos disponibles
           </TerminalOutput>
         );
         break;
