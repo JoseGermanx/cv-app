@@ -24,13 +24,6 @@ const TerminalController = (props = {}) => {
     setTerminalLineData(initialState);
   }, [initialState]);
 
-  const handleSubmission = useCallback(
-    ({ terminalSubmit }: { terminalSubmit: string }) => {
-        terminalLineData.push(<TerminalOutput>Nuevo mensaje</TerminalOutput>);
-    },
-    [setTerminalLineData]
-  );
-
   return (
     <div className="container">
       <Terminal
