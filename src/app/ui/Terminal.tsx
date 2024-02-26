@@ -1,16 +1,29 @@
 
 'use client'
-import React, {useState} from 'react';
+import React, {useState, useMemo, useEffect} from 'react';
 import Terminal, { ColorMode, TerminalOutput } from 'react-terminal-ui';
 
 const TerminalController = (props = {}) => {
-  const [terminalLineData, setTerminalLineData] = useState([
-    <TerminalOutput>Bienvenido a la terminal de jgxdev</TerminalOutput>
-  ]);
+
+    const initialState = useMemo(
+        () => [
+          <TerminalOutput>Ingresa un comando</TerminalOutput>,
+          <TerminalOutput></TerminalOutput>
+        ],
+        []
+      )
+
+  const [terminalLineData, setTerminalLineData] = useState(initialState);
   // Terminal has 100% width by default so it should usually be wrapped in a container div
+
+  useEffect(() => {
+    setTerminalLineData(initialState)
+  }, [initialState])
+
+  
   return (
     <div className="container">
-      <Terminal name='Ingresa un comando' colorMode={ ColorMode.Dark}  onInput={ terminalInput => console.log(`New terminal input received: '${ terminalInput }'`) }>
+      <Terminal name='Bienvenido a la terminal de jgxdev' colorMode={ ColorMode.Dark}  onInput={ terminalInput => console.log(`New terminal input received: '${ terminalInput }'`) }>
         { terminalLineData }
       </Terminal>
     </div>
