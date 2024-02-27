@@ -43,7 +43,7 @@ const Hero = () => {
       </div>
       <div className="text-center">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-         <span ref={el}></span> Developer
+         <span ref={el} className=" text-indigo-600"></span> Developer
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-600">
           Hola. bienvenido a mi sitio web. Soy desarrollador de software full stack
