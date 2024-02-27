@@ -56,7 +56,92 @@ const tecnologies = [
         imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
         imageAlt: "AWS",
         imageLogo: "https://simpleicons.org/icons/amazonaws.svg"
+    },
+    {
+        id: 11,
+        name: 'Azure',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg',
+        imageAlt: "Azure",
+        imageLogo: "https://simpleicons.org/icons/microsoftazure.svg"
+    },
+    {
+        id: 12,
+        name: 'Docker',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/7/79/Docker_%28container_engine%29_logo.png',
+        imageAlt: "Docker",
+        imageLogo: "https://simpleicons.org/icons/docker.svg"
+    },
+    {
+        id: 13,
+        name: 'Jest',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Logo-jest.svg',
+        imageAlt: "Jest",
+        imageLogo: "https://simpleicons.org/icons/jest.svg"
+    },
+    {
+        id: 16,
+        name: 'Flask',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg',
+        imageAlt: "Flask",
+        imageLogo: "https://simpleicons.org/icons/flask.svg"
+    },
+    {
+        id: 18,
+        name: 'MySQL',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/0/02/Mysql-dolphin-square.jpg',
+        imageAlt: "MySQL",
+        imageLogo: "https://simpleicons.org/icons/mysql.svg"
+    },
+    {
+        id: 19,
+        name: 'TypeScript',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+        imageAlt: "TypeScript",
+        imageLogo: "https://simpleicons.org/icons/typescript.svg"
+    },
+    {
+        id: 20,
+        name: 'Python',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg',
+        imageAlt: "Python",
+        imageLogo: "https://simpleicons.org/icons/python.svg"
+    },
+    {
+        id: 22,
+        name: 'HTML5',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg',
+        imageAlt: "HTML5",
+        imageLogo: "https://simpleicons.org/icons/html5.svg"
+    },
+    {
+        id: 23,
+        name: 'CSS3',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg',
+        imageAlt: "CSS3",
+        imageLogo: "https://simpleicons.org/icons/css3.svg"
+    },
+    {
+        id: 24,
+        name: 'JavaScript',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg',
+        imageAlt: "JavaScript",
+        imageLogo: "https://simpleicons.org/icons/javascript.svg"
+    },
+    {
+        id: 26,
+        name: 'Redux',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png',
+        imageAlt:"Redux",
+        imageLogo: "https://simpleicons.org/icons/redux.svg"
+    },
+    {
+        id:27,
+        name: 'Astro',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/3/3d/Astro_Logo.svg',
+        imageAlt: "Astro",
+        imageLogo: "https://simpleicons.org/icons/astro.svg"
     }
+
 ]
 
 const TechStack = () => {
