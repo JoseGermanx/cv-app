@@ -1,4 +1,6 @@
-import Image from "next/image";
+'use client'
+
+import React, { useEffect } from "react";
 import NavBar from "./ui/Navbar";
 import Hero from "./ui/Hero";
 import Footer from "./ui/Footer";
@@ -6,6 +8,9 @@ import TechStack from "./ui/TechStack";
 import TerminalController from "./ui/Terminal";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
     <NavBar />
