@@ -144,6 +144,7 @@ const TerminalController = (props = {}) => {
 
   return (
     <div className="container text-sm">
+      <h2 className="text-5xl font-bold tracking-tight text-gray-900 text-center mb-5">Terminal</h2>
       <Terminal
         name="Bienvenido a la terminal de jgxdev"
         colorMode={ColorMode.Dark}
