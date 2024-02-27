@@ -1,8 +1,5 @@
 import React from "react";
 
-// links a redes sociales, github, linkedin, twitter, instagram, facebook en un carrusel con los logos de cada red social
-
-// listado de objetos con nombre de redes sociales y links a logos (tomar de https://simpleicons.org/)
 const socialMedia = [
   {
     id: 1,

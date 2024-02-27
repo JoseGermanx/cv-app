@@ -1,6 +1,4 @@
-import Image from 'next/image'
 
-//incluir en los objetos una propiedad que sea el logo desde https://simpleicons.org/
 
 const tecnologies = [
     {
