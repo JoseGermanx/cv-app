@@ -15,6 +15,8 @@ const Footer = () => {
       </a>
     </p>
     <p>BetaCode Servicios Digitales e Informaticos E.I.R.L</p>
+    <iframe src="https://www.superprof.cl/enfocado-ensenar-mis-estudiantes-para-aprendan-programar-javascript-manera-divertida.html"  width="100" height="20" title="SuperProf"></iframe>
+    
   </div>
   )
 }
