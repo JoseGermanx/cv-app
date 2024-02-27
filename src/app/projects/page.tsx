@@ -8,6 +8,15 @@ const products = [
       price: '$35',
       color: 'Black',
     },
+    {
+      id: 2,
+      name: 'Dionisio Wines',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+      imageAlt: "Front of mens Basic Tee in gray.",
+      price: '$35',
+      color: 'Gray',
+    },
     // More products...
   ]
   
