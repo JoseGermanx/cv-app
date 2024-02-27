@@ -6,6 +6,7 @@ import Hero from "./ui/Hero";
 import Footer from "./ui/Footer";
 import TechStack from "./ui/TechStack";
 import TerminalController from "./ui/Terminal";
+import Socialmedia from "./ui/Socialmedia";
 
 export default function Home() {
   useEffect(() => {
@@ -16,10 +17,12 @@ export default function Home() {
     <NavBar />
       <main className="flex min-h-screen flex-col items-center justify-between p-3">
         <Hero />
+        <Socialmedia />
         <div className="lg:w-2/3 sm:w-4/5" id="terminal">
         <TerminalController />
         </div>
         <TechStack />
+        
       </main>
       <Footer />
     </>
