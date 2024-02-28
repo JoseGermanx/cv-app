@@ -150,14 +150,14 @@ const TechStack = () => {
             <div className=" mt-24 mx-auto max-w-2xl px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
                 <h2 className="text-5xl font-bold tracking-tight text-gray-900 text-center mb-5">Tecnologías</h2>
 
-                <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                <div className="mt-6 grid grid-cols-3 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 justify-center ">
                     {tecnologies.map((tecnology) => (
                         <div key={tecnology.id} className="group relative">
                             <div className="aspect-h-1 aspect-w-1 w-auto overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75">
                                 <img
                                     src={tecnology.imageLogo}
                                     alt={tecnology.imageAlt}
-                                    className=" h-5 w-5 object-cover object-center lg:h-20 lg:w-20"
+                                    className=" h-10 w-10 object-cover object-center lg:h-20 lg:w-20"
                                 />
                             </div>
                         </div>
