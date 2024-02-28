@@ -5,9 +5,9 @@ import Image from "next/image";
 const NavBar = () => {
   return (
     <nav className=" bg-slate-300">
-      <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          {/* <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <button
               type="button"
               className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -47,9 +47,9 @@ const NavBar = () => {
                 />
               </svg>
             </button>
-          </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
+          </div> */}
+          <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
+            <div className="flex flex-shrink-0 items-start">
               <a href="/">
                 <Image
                   className="h-auto w-10"
@@ -60,7 +60,7 @@ const NavBar = () => {
                 />
               </a>
             </div>
-            <div className="sm:ml-6 sm:block">
+            <div className=" hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {/* <a
                   href="/projects"
@@ -103,7 +103,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className="sm:hidden" id="mobile-menu">
+      {/* <div className="sm:hidden" id="mobile-menu">
         <div className="space-y-1 px-2 pb-3 pt-2">
           <a
             href="#"
@@ -131,7 +131,7 @@ const NavBar = () => {
             Calendar
           </a>
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 };
