@@ -9,7 +9,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
   return (
     <div>
       <NavBar />
-      <div className="w-full flex md:w-64 mb-5 mx-20 mt-9">
+      <div className="flex md:w-64 mb-5 mx-20 mt-9">
         <Link href="/blog">
           <ArrowLeftIcon className="h-6 w-6" />
           <p>back</p>
@@ -23,7 +23,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
         <p className="">{articleData.date}</p>
       </div>
       <hr />
-      <div className=" w-full mt-8 px-3 sm:px-25 pb-10">
+      <div className="mt-8 mx-20 p-15 sm:px-25 pb-10">
         <div
           className="article"
           dangerouslySetInnerHTML={{ __html: articleData.contentHtml }}
