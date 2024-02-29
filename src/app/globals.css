@@ -37,5 +37,42 @@ body {
 }
 
 .article {
-  @apply text-balance flex flex-col gap-3 text-lg tracking-wide;
+  @apply text-balance flex flex-col gap-3 text-lg tracking-wide isolate;
 }
+
+.article > h1 {
+  @apply text-4xl font-bold;
+}
+
+.article > h2 {
+  @apply text-3xl font-bold;
+}
+
+.article > p {
+  @apply leading-relaxed;
+}
+
+.article > img {
+  @apply w-full h-auto;
+}
+
+.article > blockquote {
+  @apply italic border-l-4 border-gray-500 pl-4;
+}
+
+.article > ul {
+  @apply list-disc list-inside;
+}
+
+.article > ol {
+  @apply list-decimal list-inside;
+}
+
+.article > pre {
+  @apply p-4 bg-gray-100 rounded-lg;
+}
+
+.article > pre > code {
+  @apply block;
+}
+
