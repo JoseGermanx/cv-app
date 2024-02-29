@@ -35,3 +35,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.article {
+  @apply text-balance flex flex-col gap-3 text-lg tracking-wide;
+}

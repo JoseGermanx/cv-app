@@ -23,7 +23,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
       </div>
         <hr />
         <div className="w-full mt-8 px-20 pb-10">
-      <div dangerouslySetInnerHTML={{ __html: articleData.contentHtml }} />
+      <div className="article" dangerouslySetInnerHTML={{ __html: articleData.contentHtml }} />
       </div>
     </div>
   );
