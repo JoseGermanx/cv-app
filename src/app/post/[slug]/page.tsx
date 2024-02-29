@@ -16,9 +16,9 @@ const Article = async ({ params }: { params: { slug: string } }) => {
         </Link>
       </div>
       <br />
-      <div className="flex flex-col w-full mx-3 sm:mx-20">
+      <div className="mx-20 sm:mx-20">
         <div>
-          <h1 className="text-4xl ">{articleData.title}</h1>
+          <h1 className="text-4xl">{articleData.title}</h1>
         </div>
         <p className="">{articleData.date}</p>
       </div>
