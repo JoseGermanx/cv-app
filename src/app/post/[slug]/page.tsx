@@ -18,7 +18,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
       <br />
       <div className="mx-10 sm:mx-20">
         <div>
-          <h1 className="text-4xl">{articleData.title}</h1>
+          <h1 className="text-4xl font-bold ">{articleData.title}</h1>
         </div>
         <p className="">{articleData.date}</p>
       </div>
