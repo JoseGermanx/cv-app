@@ -3,6 +3,8 @@ title: 'Mi Experiencia como Instructor de JavaScript: Un Año de Crecimiento y S
 date: '2024-02-29'
 ---
 
+![JavaScript](https://upload.wikimedia.org/wikipedia/commons/archive/6/6a/20120221235432%21JavaScript-logo.png)
+
 ¡Hola a todos! Ha pasado un año desde que comencé mi aventura como instructor de JavaScript, y hoy quiero compartir con ustedes lo increíble que ha sido este viaje.
 
 ## El Comienzo
