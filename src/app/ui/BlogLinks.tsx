@@ -5,7 +5,7 @@ import ArticleListItems from './ArticleListItems';
 const BlogLinks = () => {
     const articles = getCategorisedArticles();
   return (
-    <div>
+    <div className='h-screen'>
         {
             Object.keys(articles).map((article, index) => (
                 <ArticleListItems
