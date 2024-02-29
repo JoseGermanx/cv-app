@@ -12,7 +12,9 @@ const ArticleListItems = ({ articles }: Props) => {
                 <div key={index}>
                     <Link href={`/post/${article.id}`}>
                         {article.title}
+                        <p><small>{article.date}</small></p>
                     </Link>
+                    <hr />
                 </div>
             ))}
         </div>
