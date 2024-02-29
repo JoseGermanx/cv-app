@@ -1,11 +1,17 @@
-import React from 'react'
-import BlogLinks from '../ui/BlogLinks'
+import React from "react";
+import BlogLinks from "../ui/BlogLinks";
+import Footer from "../ui/Footer";
 
-export default function Page(){
+export default function Page() {
   return (
-    <div>
-        <h1 className="text-5xl font-bold tracking-tight text-gray-900 text-center mb-5">Blog</h1>
+    <>
+      <div className="flex min-h-screen flex-col items-center justify-between p-3">
+        <h1 className="text-5xl font-bold tracking-tight text-gray-900 text-center mb-5">
+          Blog
+        </h1>
         <BlogLinks />
-    </div>
-  )
+      </div>
+      <Footer />
+    </>
+  );
 }
