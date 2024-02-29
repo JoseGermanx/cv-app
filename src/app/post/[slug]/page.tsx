@@ -16,14 +16,14 @@ const Article = async ({ params }: { params: { slug: string } }) => {
         </Link>
       </div>
       <br />
-      <div className="mx-20 sm:mx-20">
+      <div className="mx-10 sm:mx-20">
         <div>
           <h1 className="text-4xl">{articleData.title}</h1>
         </div>
         <p className="">{articleData.date}</p>
       </div>
       <hr />
-      <div className="mt-8 mx-20 p-15 sm:px-25 pb-10">
+      <div className="mt-8 mx-10 p-15 sm:px-25 pb-10">
         <div
           className="article"
           dangerouslySetInnerHTML={{ __html: articleData.contentHtml }}
