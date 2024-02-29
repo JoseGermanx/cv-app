@@ -69,6 +69,10 @@ body {
 }
 
 .article > pre {
-  @apply p-4 bg-gray-800 rounded-lg text-gray-100;
+  @apply p-4 bg-gray-800 rounded-lg text-gray-100 text-wrap;
+}
+
+.article > pre > code {
+  @apply block;
 }
 
