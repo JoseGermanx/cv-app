@@ -9,7 +9,7 @@ const ArticleListItems = ({ articles }: Props) => {
     return (
         <div className="article-list mt-3">
             {articles.map((article, index) => (
-                <div key={index}>
+                <div key={index} className=" rounded hover:bg-gray-300">
                     <Link href={`/post/${article.id}`}>
                         {article.title}
                         <p><small>{article.date}</small></p>
