@@ -35,7 +35,6 @@ body {
     text-wrap: balance;
   }
 }
-
 .article {
   @apply flex flex-col gap-3 text-lg tracking-wide isolate;
 }
@@ -76,3 +75,11 @@ body {
   @apply block;
 }
 
+div.react-terminal-line {
+  text-wrap: wrap;
+}
+
+div.react-terminal-wrapper {
+  color: rgb(223, 223, 204);
+  font-size: small
+}
