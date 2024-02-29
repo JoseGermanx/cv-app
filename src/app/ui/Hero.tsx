@@ -26,7 +26,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative isolate px-6 pt-2 lg:px-8 h-screen mt-20">
+    <div className="relative isolate px-6 pt-2 lg:px-8 h-auto mt-20 mb-10">
     <div
       className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
       aria-hidden="true"
