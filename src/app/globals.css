@@ -37,7 +37,7 @@ body {
 }
 
 .article {
-  @apply text-balance flex flex-col gap-3 text-lg tracking-wide isolate;
+  @apply flex flex-col gap-3 text-lg tracking-wide isolate;
 }
 
 .article > h1 {
@@ -49,7 +49,7 @@ body {
 }
 
 .article > p {
-  @apply leading-relaxed;
+  @apply text-justify leading-relaxed;
 }
 
 .article > img {
