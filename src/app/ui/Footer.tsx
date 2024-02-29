@@ -1,8 +1,11 @@
 import React from 'react'
+import NavBarBottom from './NavBarBottom'
 
 const Footer = () => {
   return (
-    <div className="absolute w-full border-t border-gray-200 bg-white py-5 text-center">
+    <>
+    <NavBarBottom />
+    <div className="w-full border-t border-gray-200 bg-white py-5 text-center">
     <p className="text-gray-500">
       A web application made with by {" "}
       <a
@@ -16,6 +19,7 @@ const Footer = () => {
     </p>
     <p>BetaCode Servicios Digitales e Informaticos E.I.R.L</p>    
   </div>
+  </>
   )
 }
 
