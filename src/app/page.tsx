@@ -6,7 +6,6 @@ import Hero from "./ui/Hero";
 import Footer from "./ui/Footer";
 import TechStack from "./ui/TechStack";
 import TerminalController from "./ui/Terminal";
-import Socialmedia from "./ui/Socialmedia";
 
 export default function Home() {
   useEffect(() => {
@@ -20,8 +19,7 @@ export default function Home() {
         <div className=" hidden sm:inline sm:mt-56 lg:mt-1 lg:w-2/3 sm:w-4/5" id="terminal">
         <TerminalController />
         </div>
-        <TechStack />
-        
+        <TechStack />        
       </main>
       <Footer />
     </>
