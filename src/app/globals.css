@@ -52,7 +52,7 @@ body {
 }
 
 .article > img {
-  @apply w-full h-auto;
+  @apply w-10 h-auto;
 }
 
 .article > blockquote {
