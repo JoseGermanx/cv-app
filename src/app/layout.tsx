@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "José Germán Martínez",
-  description: "Software Developer",
+  description: "Software Developer, JavaScript, TypeScript, React, Next.js",
+  keywords: "software, developer, javascript, typescript, react, nextjs",
 };
 
 export default function RootLayout({
