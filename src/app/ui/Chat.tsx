@@ -1,7 +1,13 @@
 import { io } from "socket.io-client";
 import { useState, useEffect, useRef } from "react";
 
-const socket = io("http://192.168.1.94:4000");
+const socket = io(
+  "http://localhost:4000",
+
+  {
+    reconnection: false,
+  }
+);
 
 function Chat() {
   const [isConnected, setIsConnected] = useState(false);
@@ -12,7 +18,6 @@ function Chat() {
   const ref = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-
     socket.on("chat_message", (data) => {
       setMensajes((mensajes) => [...mensajes, data]);
     });
@@ -21,7 +26,7 @@ function Chat() {
       socket.off("connect");
       socket.off("chat_message");
     };
-  }, [usuario.length]);
+  }, []);
 
   useEffect(() => {
     if (socket.connected) {
@@ -44,12 +49,12 @@ function Chat() {
 
   const openChat = () => {
     socket.on("connet", () => console.log("conectado"));
-    setIsConnected(true)
+    setIsConnected(true);
   };
 
   const closeChat = () => {
     socket.on("disconnect", () => console.log("desconectado"));
-    setIsConnected(false)
+    setIsConnected(false);
   };
 
   return (
@@ -66,14 +71,15 @@ function Chat() {
 
       <div className=" placeholder-gray-500">
         {isConnected && (
-        <ul>
-          {mensajes.map((mensaje, index) => (
-            <li key={index} className="py-1">
-              {" "}
-              {mensaje.usuario}: {mensaje.mensaje}
-            </li>
-          ))}
-        </ul>)}
+          <ul>
+            {mensajes.map((mensaje, index) => (
+              <li key={index} className="py-1">
+                {" "}
+                {mensaje.usuario}: {mensaje.mensaje}
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
       {!isConnected ? (
         <button
@@ -90,6 +96,7 @@ function Chat() {
               className=" mx-1 w-10/12 p-2 rounded-md bg-slate-900 text-slate-200 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent"
               type="text"
               onChange={(e) => setUsuario(e.target.value)}
+              id="usuario"
             />
           )}
           <input
@@ -97,6 +104,7 @@ function Chat() {
             placeholder="Escribe un mensaje..."
             type="text"
             onChange={(e) => setNuevoMensaje(e.target.value)}
+            id="mensaje"
           />
           <button className=" px-5" onClick={enviarMensaje}>
             Enviar
