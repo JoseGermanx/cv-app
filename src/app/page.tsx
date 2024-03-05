@@ -7,6 +7,7 @@ import Footer from "./ui/Footer";
 import TechStack from "./ui/TechStack";
 import TerminalController from "./ui/Terminal";
 import { Suspense } from "react";
+import Chat from "./ui/Chat";
 
 export default function Home() {
   useEffect(() => {
@@ -25,6 +26,7 @@ export default function Home() {
             <TerminalController />
           </Suspense>
         </div>
+        <Chat />
         <TechStack />
       </main>
       <Footer />
