@@ -18,6 +18,7 @@
     "react-terminal-ui": "^1.2.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "socket.io-client": "^4.7.4",
     "typed-js": "^0.2.3",
     "typed.js": "^2.1.0"
   },
