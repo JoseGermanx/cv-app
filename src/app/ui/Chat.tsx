@@ -9,10 +9,15 @@ const socket = io(
   }
 );
 
+type Mensaje = {
+  usuario: string;
+  mensaje: string;
+};
+
 function Chat() {
   const [isConnected, setIsConnected] = useState(false);
   const [nuevoMensaje, setNuevoMensaje] = useState("");
-  const [mensajes, setMensajes] = useState([]);
+  const [mensajes, setMensajes] = useState<Mensaje[]>([]);
   const [usuario, setUsuario] = useState("");
 
   const ref = useRef<HTMLFormElement>(null);
@@ -34,7 +39,7 @@ function Chat() {
     } else {
       setIsConnected(false);
     }
-  }, [setIsConnected]);
+  }, [socket.connected]);
 
   const enviarMensaje = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -49,12 +54,10 @@ function Chat() {
 
   const openChat = () => {
     socket.on("connet", () => console.log("conectado"));
-    setIsConnected(true);
   };
 
   const closeChat = () => {
     socket.on("disconnect", () => console.log("desconectado"));
-    setIsConnected(false);
   };
 
   return (
