@@ -8,6 +8,7 @@ import TechStack from "./ui/TechStack";
 import TerminalController from "./ui/Terminal";
 import { Suspense } from "react";
 import Chat from "./ui/Chat";
+import ChatNextUi from "./ui/ChatNextUi";
 
 export default function Home() {
   useEffect(() => {
@@ -26,7 +27,8 @@ export default function Home() {
             <TerminalController />
           </Suspense>
         </div>
-        <Chat />
+        {/* <Chat /> */}
+        <ChatNextUi />
         <TechStack />
       </main>
       <Footer />
