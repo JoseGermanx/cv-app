@@ -39,7 +39,7 @@ const Hero = () => {
         />
       </div>
       <div className="mx-auto max-w-2xl py-4 sm:py-4 lg:py-4">
-        <Link href=" https://nerdear.la/" target="_blank">
+        <Link href="/post/nerdearla-cl-2024">
           <Image
             className="h-auto w-100"
             src="/images/NERDEARLA_logos-01.png"
