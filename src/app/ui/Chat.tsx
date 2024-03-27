@@ -4,19 +4,27 @@ import { useState, useEffect } from 'react';
 
 const socket = io('http://localhost:4000');
 
+type Mensaje = {
+  id: string;
+  usuario: string;
+  mensaje: string;
+}
+
 function App() {
 
   const [isConnected, setIsConnected] = useState(false);
   const [nuevoMensaje, setNuevoMensaje] = useState('');
-  const [mensajes, setMensajes] = useState([]);
+  const [mensajes, setMensajes] = useState<Mensaje[]>([]);
 
 useEffect(() => {
 
     socket.on('connect', () => setIsConnected(true));
 
     socket.on('chat_message', (data) => {
-        setMensajes((mensajes): []never => [...mensajes, data]);
-    });
+        // setMensajes((mensajes): []never =>{ [...mensajes, data]});
+        setMensajes((mensajes: Mensaje[]) => [...mensajes, data]);
+      
+      });
 
     return () => {
         socket.off('connect');
@@ -37,7 +45,7 @@ useEffect(() => {
       <h2>{isConnected ? 'CONECTADO' : 'NO CONECTADO'}</h2>
       <ul>
         {mensajes.map(mensaje => (
-          <li>{ key={mensaje.id} mensaje.usuario}: {mensaje.mensaje}</li>
+          <li key={mensaje.id}>{  mensaje.usuario}: {mensaje.mensaje}</li>
         ))}
       </ul>
       <input
