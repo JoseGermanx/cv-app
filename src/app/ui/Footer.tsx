@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBarBottom from './NavBarBottom'
+import Image from 'next/image'
 
 const Footer = () => {
   return (
@@ -17,7 +18,8 @@ const Footer = () => {
         BetaCode
       </a>
     </p>
-    <p>BetaCode Servicios Digitales e Informaticos E.I.R.L</p>    
+    <p>BetaCode Servicios Digitales e Informaticos E.I.R.L</p>
+    <div className='flex justify-center'><a className='mx-2' href='https://dev.to/josegermanx'>Leeme en dev.to</a><Image src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="dev.to" width={25} height={25} /> </div>
   </div>
   </>
   )
