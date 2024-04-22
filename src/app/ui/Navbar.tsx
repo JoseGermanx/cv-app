@@ -68,12 +68,12 @@ const NavBar = () => {
                 >
                   Proyectos
                 </a> */}
-                {/* <a
-                  href="#"
+                <a
+                  href="/#contact"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Contacto
-                </a> */}
+                </a>
                 <a
                   href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7078460407316635648"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"

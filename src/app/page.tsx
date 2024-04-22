@@ -6,6 +6,7 @@ import Hero from "./ui/Hero";
 import Footer from "./ui/Footer";
 import TechStack from "./ui/TechStack";
 import TerminalController from "./ui/Terminal";
+import Contact from "./ui/Contact";
 import { Suspense } from "react";
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
           </Suspense>
         </div>
         <TechStack />
+        <Contact />
       </main>
       <Footer />
     </>
