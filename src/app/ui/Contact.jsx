@@ -94,7 +94,7 @@ const Contact = () => {
               <option value="desarrollo-de-software">Desarrollo de software</option>
               <option value="asesoria-de-software">Asesoría de software</option>
               <option value="diseno-web">
-                Diseño Web y Desarrollo de páginas web
+                Desarrollo de páginas web
               </option>
               <option value="un-cafe">
                 Invitarte a un café
