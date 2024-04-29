@@ -4,6 +4,15 @@ import { getArticleData } from "@/app/lib/article";
 import NavBar from "@/app/ui/Navbar";
 import Footer from "@/app/ui/Footer";
 
+ // incluir generateStaticParams()
+export async function generateStaticParams({ params }: { params: { slug: string } }) {
+  return {
+    params: {
+      slug: params.slug,
+    },
+  };
+}
+
 const Article = async ({ params }: { params: { slug: string } }) => {
   const articleData = await getArticleData(params.slug);
 
