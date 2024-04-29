@@ -3,13 +3,15 @@ import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 import { getArticleData } from "@/app/lib/article";
 import NavBar from "@/app/ui/Navbar";
 import Footer from "@/app/ui/Footer";
+import { useParams } from "next/navigation";
+const slug = useParams().slug;
 
  // incluir generateStaticParams() para esta página
-export async function generateStaticParams({ params }: { params: { slug: string } }) {
+export async function generateStaticParams(slug: string) {
   return [
     {
       params: {
-        slug: params.slug,
+        slug: slug,
       },
     },
   ];
