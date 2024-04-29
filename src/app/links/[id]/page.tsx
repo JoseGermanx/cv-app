@@ -5,7 +5,7 @@ import { redirect } from 'next/navigation'
 // incluir generateStaticParams()
 
 export async function generateStaticParams() {
-    return LinksDeInteres.map((link) => ({
+    return await LinksDeInteres.map((link) => ({
         params: {
             id: link.namebetacode
         }
