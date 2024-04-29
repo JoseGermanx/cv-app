@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 const slug = useParams().slug;
 
  // incluir generateStaticParams() para esta página
-export async function generateStaticParams(slug: string) {
+export async function generateStaticParams(slug:any) {
   return [
     {
       params: {
