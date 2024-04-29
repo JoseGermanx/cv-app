@@ -4,7 +4,7 @@ import { redirect } from 'next/navigation'
 
 // incluir generateStaticParams()
 
-export default async function generateStaticParams() {
+export async function generateStaticParams() {
     return LinksDeInteres.map((link) => ({
         params: {
             id: link.namebetacode
@@ -12,12 +12,12 @@ export default async function generateStaticParams() {
     }))
 }
 
-// export async function LinkPage({ params }: { params: any }) {
+export default async function LinkPage({ params }: { params: any }) {
     
-//     const link = LinksDeInteres.find((link) => link.namebetacode === params.id);
+    const link = LinksDeInteres.find((link) => link.namebetacode === params.id);
     
-//     if (link) {
-//         redirect(link.path)
-//     }
-//     redirect('/')
-// }  
+    if (link) {
+        redirect(link.path)
+    }
+    redirect('/')
+}  
