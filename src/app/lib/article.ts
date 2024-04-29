@@ -9,7 +9,7 @@ import { ArticleItem } from '../../../types';
 
 const articlesDirectory = path.join(process.cwd(), 'src/app/articles');
 
-const getSortedrArticles = (): ArticleItem[] => {
+export const getSortedrArticles = (): ArticleItem[] => {
     const fileNames = fs.readdirSync(articlesDirectory);
 
     const allArticlesData = fileNames.map((fileName) => {
