@@ -1,20 +1,19 @@
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
-import { getArticleData } from "@/app/lib/article";
+import { getArticleData, getSortedrArticles } from "@/app/lib/article";
 import NavBar from "@/app/ui/Navbar";
 import Footer from "@/app/ui/Footer";
-import { useParams } from "next/navigation";
-const slug = useParams().slug;
 
  // incluir generateStaticParams() para esta página
 export async function generateStaticParams() {
-  return [
-    {
-      params: {
-        slug: slug
-      },
-    },
-  ];
+
+  const slug = await getSortedrArticles()
+  return slug.map(slug) = ({
+    params: {
+      slug: slug.id
+    }
+
+  })
   }
 
 const Article = async ({ params }: { params: { slug: string } }) => {
