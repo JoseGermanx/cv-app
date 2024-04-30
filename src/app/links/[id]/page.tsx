@@ -17,5 +17,5 @@ export default async function LinkPage({ params }: { params: {id: string} }) {
     if (link) {
         redirect(link.path)
     }
-    redirect('/')
+    redirect('/links')
 }  
