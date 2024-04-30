@@ -4,8 +4,7 @@ import { getArticleData, getSortedrArticles } from "@/app/lib/article";
 import NavBar from "@/app/ui/Navbar";
 import Footer from "@/app/ui/Footer";
 
- // incluir generateStaticParams() para esta página
-export async function generateStaticParams() {
+export function generateStaticParams() {
 const slug = getSortedrArticles()
   return slug.map((slug) => {
     return {
