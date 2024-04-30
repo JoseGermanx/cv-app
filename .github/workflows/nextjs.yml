@@ -29,12 +29,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Add Mask
-        run: echo "::add-mask::${{ secrets.NEXT_PUBLIC_SERVICE_ID }}"
-      - name: Echo a secret  
-        run: echo "your secret token is ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }}"
-      - name: Echo a secret  
-        run: echo "your secret token is ${{ secrets.NEXT_PUBLIC_KEY }}"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
@@ -91,6 +85,10 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      NEXT_PUBLIC_SERVICE_ID: ${{ secrets.NEXT_PUBLIC_SERVICE_ID }}
+      NEXT_PUBLIC_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }}
+      NEXT_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_KEY }}
     runs-on: ubuntu-latest
     needs: build
     steps:
