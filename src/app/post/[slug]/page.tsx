@@ -7,11 +7,10 @@ import Footer from "@/app/ui/Footer";
 export function generateStaticParams() {
   const slug = getSortedrArticles();
   return slug.map((slug) => ({
-    params: {
-      slug: slug.id,
-    },
+    slug: slug.id,
   }));
 }
+console.log(generateStaticParams());
 
 const Article = async ({ params }: { params: { slug: string } }) => {
   const articleData = await getArticleData(params.slug);
