@@ -2,10 +2,7 @@
 import { LinksDeInteres } from '@/app/ui/LinksInteres'
 import { redirect } from 'next/navigation'
 
-// incluir generateStaticParams()
-
 export function generateStaticParams() {
-    console.log(LinksDeInteres)
     return LinksDeInteres.map((link) => ({
         params: {
             id: link.namebetacode
@@ -13,7 +10,7 @@ export function generateStaticParams() {
     }))
 }
 
-export default async function LinkPage({ params }: { params: any }) {
+export default async function LinkPage({ params }: { params: {id: string} }) {
     
     const link = LinksDeInteres.find((link) => link.namebetacode === params.id);
     
