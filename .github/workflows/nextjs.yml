@@ -29,6 +29,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Add Mask
+        run: echo "::add-mask::${{ secrets.NEXT_PUBLIC_SERVICE_ID }}"
+      - name: Echo a secret  
+        run: echo "your secret token is ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }}"
+      - name: Echo a secret  
+        run: echo "your secret token is ${{ secrets.NEXT_PUBLIC_KEY }}"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
