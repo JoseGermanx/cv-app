@@ -5,14 +5,14 @@ import NavBar from "@/app/ui/Navbar";
 import Footer from "@/app/ui/Footer";
 
  // incluir generateStaticParams() para esta página
-export function generateStaticParams() {
+export async function generateStaticParams() {
 
-  const slug = getSortedrArticles()
+const slug = await getSortedrArticles()
   console.log(slug)
   return slug.map((slug) => {
     return {
       params: {
-        slug: slug.title,
+        slug: slug.id,
       },
     };
   });
