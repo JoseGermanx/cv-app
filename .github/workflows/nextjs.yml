@@ -28,10 +28,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      NEXT_PUBLIC_SERVICE_ID: ${{ secrets.NEXT_PUBLIC_SERVICE_ID }}
-      NEXT_PUBLIC_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }}
-      NEXT_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_KEY }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -53,6 +49,10 @@ jobs:
             exit 1
           fi
       - name: Setup Node
+        env:
+          NEXT_PUBLIC_SERVICE_ID: ${{ secrets.NEXT_PUBLIC_SERVICE_ID }}
+          NEXT_PUBLIC_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }}
+          NEXT_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_KEY }}
         uses: actions/setup-node@v4
         with:
           node-version: "20"
