@@ -45,13 +45,15 @@ const LinksInteres = () => {
   return (
     <div>
       <ul>
+        <div  className="article-list mt-3">
         {LinksDeInteres.map((link) => (
-          <li key={link.id} className="article-list mt-3">
+          <li key={link.id}>
             <Link className="p-2" href={link.path} target="_blanck">
               {link.name}
             </Link>
           </li>
         ))}
+        </div>
       </ul>
     </div>
   );
