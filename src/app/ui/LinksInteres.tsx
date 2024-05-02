@@ -32,6 +32,13 @@ export const LinksDeInteres = [
     category: "AI",
     namebetacode: "courseraprompt",
   },
+  {
+    id: 5,
+    name: "DevDocs",
+    path: "https://devdocs.io/",
+    category: "Software Development",
+    namebetacode: "devdocs",
+  }
 ];
 
 const LinksInteres = () => {
