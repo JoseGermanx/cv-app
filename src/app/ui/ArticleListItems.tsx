@@ -7,7 +7,7 @@ interface Props {
 
 const ArticleListItems = ({ articles }: Props) => {
     return (
-        <div className="article-list mt-3">
+        <div className="article-list mt-3 p-2">
             {articles.map((article, index) => (
                 <div key={index} className=" rounded hover:bg-gray-300">
                     <Link href={`/post/${article.id}`}>

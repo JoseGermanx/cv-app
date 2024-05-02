@@ -46,7 +46,7 @@ const LinksInteres = () => {
     <div>
       <ul>
         {LinksDeInteres.map((link) => (
-          <li key={link.id}>
+          <li key={link.id} className="article-list mt-3 p-2">
             <Link href={link.path} target="_blanck">
               {link.name}
             </Link>
