@@ -14,7 +14,7 @@ const Hero = () => {
       strings: ["FullStack", "Frontend", "Backend"],
       typeSpeed: 100,
       loop: true,
-      showCursor: false,
+      showCursor: true,
       backDelay: 1000,
     });
 
@@ -42,10 +42,13 @@ const Hero = () => {
         <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            <span ref={el} className=" text-indigo-600"></span> Developer
+            <span className=" text-indigo-600">Software</span> Developer
           </h1>
+          <h2 className="text-1xl font-bold tracking-tight text-gray-900 sm:text-2xl mt-3">
+            <span ref={el} className=" text-gray-600"></span>
+          </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Hola, bienvenido a mi sitio web. Soy ingeniero desarrollador de
+            Hola, bienvenido a mi sitio web. Mi nombre es José Germán. Soy ingeniero, desarrollador de
             Software Full Stack e instructor de JavaScript.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
