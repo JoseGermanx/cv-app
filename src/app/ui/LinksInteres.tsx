@@ -47,7 +47,7 @@ const LinksInteres = () => {
       <ul>
         {LinksDeInteres.map((link) => (
           <li key={link.id}>
-            <Link href={`links/${link.namebetacode}`} target="_blanck">
+            <Link href={link.path} target="_blanck">
               {link.name}
             </Link>
           </li>
