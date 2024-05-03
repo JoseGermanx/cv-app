@@ -51,8 +51,7 @@ const Contact = () => {
             ¡Ponte en contacto!
           </h2>
           <p className="leading-relaxed mb-5">
-            Utiliza el siguiente formulario y solicita alguno de nuestros
-            servicios:
+            Utiliza el siguiente formulario y contáctame.
           </p>
           <div className="relative mb-4">
             <label htmlFor="name" className="leading-7 text-sm">
