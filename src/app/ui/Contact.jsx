@@ -10,18 +10,18 @@ const Contact = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(global.process.env.NEXT_PUBLIC_KEY)
+    console.log(process.env.NEXT_PUBLIC_KEY)
     if (!name || !email || !message || !service) {
       alert("Todos los campos son obligatorios");
       return;
     }
     emailjs
       .sendForm(
-        `${global.process.env.NEXT_PUBLIC_SERVICE_ID}`, 
-        `${global.process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
+        `${process.env.NEXT_PUBLIC_SERVICE_ID}`, 
+        `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
         form.current,
         {
-          publicKey: `${global.process.env.NEXT_PUBLIC_KEY}`,
+          publicKey: `${process.env.NEXT_PUBLIC_KEY}`,
         }
       )
       .then(
