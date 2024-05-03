@@ -21,7 +21,7 @@ const Contact = () => {
         `${process.env.NEXT_PUBLIC_TEMPLATE_ID}`,
         form.current,
         {
-          publicKey: `tpeSiOESNPaCeuHZS`,
+          publicKey: `${process.env.NEXT_PUBLIC_KEY}`,
         }
       )
       .then(
