@@ -50,7 +50,7 @@ const NavBar = () => {
           </div> */}
           <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
             <div className="flex flex-shrink-0 items-start">
-              <a href="/">
+              <Link href="/">
                 <Image
                   className="h-auto w-10"
                   src="/images/jgxdev_logo.png"
@@ -58,7 +58,7 @@ const NavBar = () => {
                   width={500}
                   height={500}
                 />
-              </a>
+              </Link>
             </div>
             <div className=" hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
@@ -68,43 +68,43 @@ const NavBar = () => {
                 >
                   Proyectos
                 </a> */}
-                <a
+                <Link
                   href="/#contact"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Contacto
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7078460407316635648"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   target="_blank"
                 >
                   Newsletter
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/#terminal"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Terminal
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                   href="/blog"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Blog
-                </a>
+                </Link>
               </div>
             </div>
           </div>
           <div className="flex items-center">
-            <a
+            <Link
               href="/cv_jose_martinez.pdf"
               className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium mx-2"
               aria-current="page"
             >
               CV
-            </a>
-            <h3>José Germán Martínez</h3>
+            </Link>
+            <p>José Germán Martínez</p>
           </div>
         </div>
       </div>
