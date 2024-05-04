@@ -26,14 +26,12 @@ concurrency:
 jobs:
   # Build job
   build:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        env:
-          NEXT_PUBLIC_SERVICE_ID: ${{ secrets.NEXT_PUBLIC_SERVICE_ID }}
-          NEXT_PUBLIC_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }}
-          NEXT_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_KEY }} 
       - name:   
         uses: 1arp/create-a-file-action@0.4.5
         with:
