@@ -78,6 +78,7 @@ jobs:
           echo NEXT_PUBLIC_SERVICE_ID = ${{ secrets.NEXT_PUBLIC_SERVICE_ID }} >> .env.local
           echo NEXT_PUBLIC_TEMPLATE_ID = ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }} >> .env.local
           echo NEXT_PUBLIC_KEY = ${{ secrets.NEXT_PUBLIC_KEY }} >> .env.local
+          echo ${{ secrets.NEXT_PUBLIC_KEY }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
