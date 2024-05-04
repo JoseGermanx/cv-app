@@ -11,11 +11,11 @@ const Footer = () => {
       A web application made with by {" "}
       <a
         className="font-medium text-gray-800 underline transition-colors"
-        href="https://dev.betacode.cl"
+        href="https://jgxdev.com"
         target="_blank"
         rel="noopener noreferrer"
       >
-        BetaCode
+        José Germán Martínez
       </a>
     </p>
     <p>BetaCode Servicios Digitales e Informaticos E.I.R.L</p>
