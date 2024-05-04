@@ -29,7 +29,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v4
+      - name:   
+        uses: 1arp/create-a-file-action@0.4.5
+        with:
+          path: '/'
+          isAbsolutePath: false
+          file: '.env.local'
+          content: |
+            NEXT_PUBLIC_SERVICE_ID = ${{ secrets.NEXT_PUBLIC_SERVICE_ID }} >> .env.local
+            NEXT_PUBLIC_TEMPLATE_ID = ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }} >> .env.local
+            NEXT_PUBLIC_KEY = ${{ secrets.NEXT_PUBLIC_KEY }} >> .env.local  
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -72,12 +82,12 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      - name: Setup Environment Variables
-        run: |
-          touch .env.local
-          echo NEXT_PUBLIC_SERVICE_ID = ${{ secrets.NEXT_PUBLIC_SERVICE_ID }} >> .env.local
-          echo NEXT_PUBLIC_TEMPLATE_ID = ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }} >> .env.local
-          echo NEXT_PUBLIC_KEY = ${{ secrets.NEXT_PUBLIC_KEY }} >> .env.local   
+      # - name: Setup Environment Variables
+      #   run: |
+      #     touch .env.local
+      #     echo NEXT_PUBLIC_SERVICE_ID = ${{ secrets.NEXT_PUBLIC_SERVICE_ID }} >> .env.local
+      #     echo NEXT_PUBLIC_TEMPLATE_ID = ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }} >> .env.local
+      #     echo NEXT_PUBLIC_KEY = ${{ secrets.NEXT_PUBLIC_KEY }} >> .env.local   
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
