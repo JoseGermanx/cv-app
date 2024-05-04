@@ -34,6 +34,10 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
+          touch .env.local
+          echo NEXT_PUBLIC_SERVICE_ID = ${{ secrets.NEXT_PUBLIC_SERVICE_ID }} >> .env.local
+          echo NEXT_PUBLIC_TEMPLATE_ID = ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }} >> .env.local
+          echo NEXT_PUBLIC_KEY = ${{ secrets.NEXT_PUBLIC_KEY }} >> .env.local
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
@@ -50,10 +54,6 @@ jobs:
           fi
       - name: Setup Node
         uses: actions/setup-node@v4
-        env:
-          NEXT_PUBLIC_SERVICE_ID: ${{ secrets.NEXT_PUBLIC_SERVICE_ID }}
-          NEXT_PUBLIC_TEMPLATE_ID: ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }}
-          NEXT_PUBLIC_KEY: ${{ secrets.NEXT_PUBLIC_KEY }}
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
