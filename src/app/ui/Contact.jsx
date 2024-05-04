@@ -10,7 +10,6 @@ const Contact = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(process.env.NEXT_PUBLIC_KEY)
     if (!name || !email || !message || !service) {
       alert("Todos los campos son obligatorios");
       return;
