@@ -3,7 +3,6 @@
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
 name: Deploy Next.js site to Pages
-
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -28,6 +27,11 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    run: |
+          touch .env.local
+          echo NEXT_PUBLIC_SERVICE_ID = ${{ secrets.NEXT_PUBLIC_SERVICE_ID }} >> .env.local
+          echo NEXT_PUBLIC_TEMPLATE_ID = ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }} >> .env.local
+          echo NEXT_PUBLIC_KEY = ${{ secrets.NEXT_PUBLIC_KEY }} >> .env.local
     steps:
       - name: Checkout
         uses: actions/checkout@v4          
@@ -74,12 +78,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
-        run: |
-          touch .env.local
-          echo NEXT_PUBLIC_SERVICE_ID = ${{ secrets.NEXT_PUBLIC_SERVICE_ID }} >> .env.local
-          echo NEXT_PUBLIC_TEMPLATE_ID = ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }} >> .env.local
-          echo NEXT_PUBLIC_KEY = ${{ secrets.NEXT_PUBLIC_KEY }} >> .env.local
-          ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
