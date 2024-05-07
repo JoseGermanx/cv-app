@@ -12,6 +12,7 @@ import { Suspense } from "react";
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
+    notificar();
   }, []);
 
   const requestNotification = () => {
@@ -26,17 +27,22 @@ export default function Home() {
 
   const notificar = () => {
     if (Notification.permission === "granted") {
-      const notificaction = new Notification("Servicio de notificaciones", {
-        body: "Notificación de prueba en el website de José Germán Martínez",
-        vibrate: [200, 100, 200]
-      });
+      const notificaction = new Notification("Newsletter", {
+        body: "Sigue mi newsletter en LinkedIn",
+        icon: "https://jgxdev.com/favicon.ico",
+      }
+      );
 
       notificaction.onclick = function () {
-        window.open("https://jgxdev.com");
+        window.open("https://www.linkedin.com/newsletters/7078460407316635648");
       };
       
     } else {
-      alert("No tienes permisos de notificación");
+      Notification.requestPermission()
+      .then((permission) => {
+       console.log(permission)
+      })
+      
     }
   }
 
@@ -61,20 +67,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <button
-          type="button"
-          className="p-3 bg-slate-600"
-          onClick={requestNotification}
-        >
-          Notificar
-        </button>
-        <button
-          type="button"
-          className="p-3 bg-slate-600"
-          onClick={notificar}
-        >
-          Notificación
-        </button>
     </>
   );
 }
