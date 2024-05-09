@@ -1,8 +1,40 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const NavBar = () => {
+  const [notificaciones, setNotificaciones] = useState (false)
+
+  const notificar = () => {
+    if (Notification.permission === "granted") {
+      setNotificaciones(true)
+     
+    } else {
+      Notification.requestPermission()
+      .then((permission) => {
+       setNotificaciones(true)
+      })
+      
+    }
+  }
+
+  useEffect(()=>{
+    if (Notification.permission === "granted") {
+      setNotificaciones(true)
+    }
+    const notificaction = new Notification("Newsletter", {
+      body: "Sigue mi newsletter en LinkedIn",
+      icon: "https://jgxdev.com/favicon.ico",
+    }
+    );
+
+    notificaction.onclick = function () {
+      window.open("https://www.linkedin.com/newsletters/7078460407316635648");
+    };
+    
+
+  }, [notificaciones])
+
   return (
     <nav className=" bg-slate-300">
       <div className="mx-auto w-full px-2 sm:px-6 lg:px-8">
@@ -97,6 +129,22 @@ const NavBar = () => {
             </div>
           </div>
           <div className="flex items-center">
+            {!notificaciones ? <Image
+                  className="h-auto w-5"
+                  src="/images/notification-bell-svgrepo-com.png"
+                  alt="Activa las notificaciones"
+                  width={200}
+                  height={200}
+                  onClick={notificar}
+                /> :
+                <Image
+                  className="h-auto w-5"
+                  src="/images/notification-bell-svgrepo-com-blue.png"
+                  alt="Activa las notificaciones"
+                  width={200}
+                  height={200}
+                />}
+          
             <Link
               href="/cv_jose_martinez.pdf"
               className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium mx-2"

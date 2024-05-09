@@ -12,40 +12,7 @@ import { Suspense } from "react";
 export default function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
-    notificar();
   }, []);
-
-  const requestNotification = () => {
-    if (!("Notification" in window)) {
-      alert("This browser does not support desktop notification");
-    }
-    Notification.requestPermission()
-    .then((permission) => {
-     console.log(permission)
-    })
-  };
-
-  const notificar = () => {
-    if (Notification.permission === "granted") {
-      const notificaction = new Notification("Newsletter", {
-        body: "Sigue mi newsletter en LinkedIn",
-        icon: "https://jgxdev.com/favicon.ico",
-      }
-      );
-
-      notificaction.onclick = function () {
-        window.open("https://www.linkedin.com/newsletters/7078460407316635648");
-      };
-      
-    } else {
-      Notification.requestPermission()
-      .then((permission) => {
-       console.log(permission)
-      })
-      
-    }
-  }
-
 
   return (
     <>
