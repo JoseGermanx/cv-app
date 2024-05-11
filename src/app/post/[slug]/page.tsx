@@ -10,7 +10,6 @@ export function generateStaticParams() {
     slug: slug.id,
   }));
 }
-console.log(generateStaticParams());
 
 const Article = async ({ params }: { params: { slug: string } }) => {
   const articleData = await getArticleData(params.slug);
