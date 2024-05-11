@@ -8,6 +8,9 @@ export async function generateMetadata( { params}: { params: { slug: string } })
   const articleData = await getArticleData(params.slug);
   return {
     title: articleData.title,
+    alternates: {
+      canonical: `https://jgxdev.com/post/${params.slug}`,
+    }
   };
 }
 
