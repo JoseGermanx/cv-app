@@ -24,6 +24,23 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Jest tests
+        run: npm run test
+        
   # Build job
   build:
     environment:
@@ -89,9 +106,7 @@ jobs:
       #     touch .env.local
       #     echo NEXT_PUBLIC_SERVICE_ID = ${{ secrets.NEXT_PUBLIC_SERVICE_ID }} >> .env.local
       #     echo NEXT_PUBLIC_TEMPLATE_ID = ${{ secrets.NEXT_PUBLIC_TEMPLATE_ID }} >> .env.local
-      #     echo NEXT_PUBLIC_KEY = ${{ secrets.NEXT_PUBLIC_KEY }} >> .env.local 
-      - name: Run tests
-        run: npm run test  
+      #     echo NEXT_PUBLIC_KEY = ${{ secrets.NEXT_PUBLIC_KEY }} >> .env.local
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact

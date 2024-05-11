@@ -41,9 +41,9 @@ const Hero = () => {
       <div className="mx-auto max-w-2xl py-4 sm:py-4 lg:py-4">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
         <div className="text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             <span className=" text-indigo-600">Software</span> Developer
-          </h2>
+          </h1>
           <h2 className="text-1xl font-bold tracking-tight text-gray-900 sm:text-2xl mt-3">
             <span ref={el} className=" text-gray-600"></span>
           </h2>
