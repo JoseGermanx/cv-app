@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const socialMedia = [
@@ -14,28 +15,7 @@ const socialMedia = [
     imageSrc: "https://simpleicons.org/icons/linkedin.svg",
     imageAlt: "LinkedIn",
     link: "https://www.linkedin.com/in/josegermanx/",
-  },
-  {
-    id: 3,
-    name: "Twitter",
-    imageSrc: "https://simpleicons.org/icons/twitter.svg",
-    imageAlt: "Twitter",
-    link: "https://twitter.com/jgxdev",
-  },
-  {
-    id: 4,
-    name: "Instagram",
-    imageSrc: "https://simpleicons.org/icons/instagram.svg",
-    imageAlt: "Instagram",
-    link: "https://www.instagram.com/josegermanx/",
-  },
-  {
-    id: 5,
-    name: "Facebook",
-    imageSrc: "https://simpleicons.org/icons/facebook.svg",
-    imageAlt: "Facebook",
-    link: "http://www.facebook.com/betacodecl/",
-  },
+  }
 ];
 
 const Socialmedia = () => {
@@ -46,9 +26,11 @@ const Socialmedia = () => {
           {socialMedia.map((social) => (
             <div key={social.id} className="group relative">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden group-hover:opacity-75 lg:h-auto mx-4">
-                <img
+                <Image
                   src={social.imageSrc}
                   alt={social.imageAlt}
+                  width={40}
+                  height={40}
                   className=" h-5 w-5 object-cover object-center lg:h-10 lg:w-10"
                 />
                 <a href={social.link} target="_blank">
