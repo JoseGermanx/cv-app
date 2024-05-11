@@ -136,7 +136,7 @@ const NavBar = () => {
           </div>
           <div className="flex items-center">
             {!notificaciones ? <Image
-                  className="h-auto w-5"
+                  className="h-auto w-5 cursor-pointer"
                   src="/images/notification-bell-svgrepo-com.png"
                   alt="Activa las notificaciones"
                   width={200}
@@ -146,7 +146,7 @@ const NavBar = () => {
                 <Image
                   className="h-auto w-5"
                   src="/images/notification-bell-svgrepo-com-blue.png"
-                  alt="Activa las notificaciones"
+                  alt="Notificaciones activas"
                   width={200}
                   height={200}
                 />}
