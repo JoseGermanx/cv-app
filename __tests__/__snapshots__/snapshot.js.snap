@@ -86,7 +86,13 @@ exports[`renders homepage unchanged 1`] = `
               <img
                 alt="GitHub"
                 class=" h-5 w-5 object-cover object-center lg:h-10 lg:w-10"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
                 src="https://simpleicons.org/icons/github.svg"
+                style="color: transparent;"
+                width="40"
               />
               <a
                 href="https://www.github.com/josegermanx/"
@@ -108,76 +114,16 @@ exports[`renders homepage unchanged 1`] = `
               <img
                 alt="LinkedIn"
                 class=" h-5 w-5 object-cover object-center lg:h-10 lg:w-10"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
                 src="https://simpleicons.org/icons/linkedin.svg"
+                style="color: transparent;"
+                width="40"
               />
               <a
                 href="https://www.linkedin.com/in/josegermanx/"
-                target="_blank"
-              >
-                <span
-                  aria-hidden="true"
-                  class="absolute inset-0"
-                />
-              </a>
-            </div>
-          </div>
-          <div
-            class="group relative"
-          >
-            <div
-              class="aspect-h-1 aspect-w-1 w-full overflow-hidden group-hover:opacity-75 lg:h-auto mx-4"
-            >
-              <img
-                alt="Twitter"
-                class=" h-5 w-5 object-cover object-center lg:h-10 lg:w-10"
-                src="https://simpleicons.org/icons/twitter.svg"
-              />
-              <a
-                href="https://twitter.com/jgxdev"
-                target="_blank"
-              >
-                <span
-                  aria-hidden="true"
-                  class="absolute inset-0"
-                />
-              </a>
-            </div>
-          </div>
-          <div
-            class="group relative"
-          >
-            <div
-              class="aspect-h-1 aspect-w-1 w-full overflow-hidden group-hover:opacity-75 lg:h-auto mx-4"
-            >
-              <img
-                alt="Instagram"
-                class=" h-5 w-5 object-cover object-center lg:h-10 lg:w-10"
-                src="https://simpleicons.org/icons/instagram.svg"
-              />
-              <a
-                href="https://www.instagram.com/josegermanx/"
-                target="_blank"
-              >
-                <span
-                  aria-hidden="true"
-                  class="absolute inset-0"
-                />
-              </a>
-            </div>
-          </div>
-          <div
-            class="group relative"
-          >
-            <div
-              class="aspect-h-1 aspect-w-1 w-full overflow-hidden group-hover:opacity-75 lg:h-auto mx-4"
-            >
-              <img
-                alt="Facebook"
-                class=" h-5 w-5 object-cover object-center lg:h-10 lg:w-10"
-                src="https://simpleicons.org/icons/facebook.svg"
-              />
-              <a
-                href="http://www.facebook.com/betacodecl/"
                 target="_blank"
               >
                 <span
