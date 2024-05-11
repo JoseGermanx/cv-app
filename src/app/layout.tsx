@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jgxdev.com"),
   title: {default: "Sitio web de José Germán Martínez",
   template: `%s | José Germán Martínez`,
 

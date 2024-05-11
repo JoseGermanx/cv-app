@@ -9,7 +9,7 @@ export async function generateMetadata( { params}: { params: { slug: string } })
   return {
     title: articleData.title,
     alternates: {
-      canonical: `https://jgxdev.com/post/${params.slug}`,
+      canonical: `/post/${params.slug}`,
     }
   };
 }
