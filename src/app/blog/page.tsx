@@ -2,6 +2,11 @@ import React from "react";
 import BlogLinks from "../ui/BlogLinks";
 import Footer from "../ui/Footer";
 
+export const metadata = {
+  title: "Blog - José Germán Martínez",
+  description: "Blog posts by José Germán Martínez"
+};
+
 export default function Page() {
   return (
     <>

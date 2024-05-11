@@ -3,6 +3,11 @@ import BlogLinks from "../ui/BlogLinks";
 import Footer from "../ui/Footer";
 import LinksInteres from "../ui/LinksInteres";
 
+export const metadata = {
+  title: "Link de interés - José Germán Martínez",
+  description: "Links de interés por José Germán Martínez"
+};
+
 export default function Page() {
   return (
     <>
