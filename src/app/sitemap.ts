@@ -1,14 +1,25 @@
+
 import { MetadataRoute } from 'next'
+import { getSortedrArticles } from './lib/article'
 
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    // generar un array dinamico de las rutas de la aplicación
-    // para que Next.js pueda generar un sitemap
+export default async function sitemap() {
 
-   
+    const baseUrl = 'https://jgxdev.com'
+    
+    const posts = await getSortedrArticles();
+
+    const postUrls = posts.map((post) => {
+        return {
+            url: `${baseUrl}/blog/${post.id}`,
+            lastModified: new Date(post.date),
+            changeFrequency: 'weekly',
+        }
+    }) ?? [];
+
         return [
             {
-              url: 'https://jgxdev.com',
+              url:  baseUrl,
               lastModified: new Date(),
               changeFrequency: 'weekly',
               priority: 1,
@@ -19,5 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
               changeFrequency: 'weekly',
               priority: 0.5,
             },
+            ...postUrls
           ]
 }
