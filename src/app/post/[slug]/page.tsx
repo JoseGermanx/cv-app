@@ -4,6 +4,13 @@ import { getArticleData, getSortedrArticles } from "@/app/lib/article";
 import NavBar from "@/app/ui/Navbar";
 import Footer from "@/app/ui/Footer";
 
+export async function generateMetadata( { params}: { params: { slug: string } }) {
+  const articleData = await getArticleData(params.slug);
+  return {
+    title: articleData.title,
+  };
+}
+
 export function generateStaticParams() {
   const slug = getSortedrArticles();
   return slug.map((slug) => ({
