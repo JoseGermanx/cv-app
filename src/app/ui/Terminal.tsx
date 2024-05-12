@@ -146,6 +146,7 @@ const TerminalController = (props = {}) => {
   return (
     <div className="container text-sm">
       <Terminal
+        key={terminalLineData.length}
         name="Bienvenido a la terminal de jgxdev"
         colorMode={ColorMode.Dark}
         onInput={onInput}
