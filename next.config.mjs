@@ -9,6 +9,12 @@ const nextConfig = {
             port: '',
             pathname: '/wikipedia/commons/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'tailwindui.com',
+            port: '',
+            pathname: '/img/ecommerce-images/**',
+          }
         ],
       },
       eslint: {

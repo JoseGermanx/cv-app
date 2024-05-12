@@ -1,3 +1,7 @@
+import Link from "next/link"
+import TechStack, { tecnologies } from "../ui/TechStack"
+import Image from 'next/image'
+
 const products = [
     {
       id: 1,
@@ -7,15 +11,67 @@ const products = [
       imageAlt: "Front of men's Basic Tee in black.",
       price: '$35',
       color: 'Black',
+      tech: tecnologies.filter(tech => tech.name === 'React' || tech.name === 'Node.js' || tech.name === 'Express.js' || tech.name === 'PostgreSQL').map(tech => tech.imageLogo)
     },
     {
       id: 2,
-      name: 'Dionisio Wines',
+      name: 'APP Car',
       href: '#',
       imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
       imageAlt: "Front of mens Basic Tee in gray.",
       price: '$35',
       color: 'Gray',
+      tech: tecnologies.filter(tech => tech.name === 'React' || tech.name === 'Node.js' || tech.name === 'Express.js' || tech.name === 'MySQL').map(tech => tech.imageLogo)
+    },
+    {
+      id: 3,
+      name: 'Portfolio',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+      imageAlt: "Front of mens Basic Tee in gray.",
+      price: '$35',
+      color: 'Gray',
+      tech: tecnologies.filter(tech => tech.name === 'Tailwind CSS' || tech.name === 'Next.js' || tech.name === 'TypeScript' || tech.name === 'Jest').map(tech => tech.imageLogo)
+    },
+    {
+      id: 4,
+      name: 'Agendamiento de citas',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+      imageAlt: "Front of mens Basic Tee in gray.",
+      price: '$35',
+      color: 'Gray',
+      tech: tecnologies.filter(tech => tech.name === 'React' || tech.name === 'Node.js' || tech.name === 'Express.js' || tech.name === 'PostgreSQL').map(tech => tech.imageLogo)
+    },
+    {
+      id: 5,
+      name: 'Gestión de inventario',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+      imageAlt: "Front of mens Basic Tee in gray.",
+      price: '$35',
+      color: 'Gray',
+      tech: tecnologies.filter(tech => tech.name === 'React' || tech.name === 'Node.js' || tech.name === 'Express.js' || tech.name === 'MySQL').map(tech => tech.imageLogo)
+    },
+    {
+      id: 6,
+      name: 'Gestión de ventas',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+      imageAlt: "Front of mens Basic Tee in gray.",
+      price: '$35',
+      color: 'Gray',
+      tech: tecnologies.filter(tech => tech.name === 'React' || tech.name === 'Node.js' || tech.name === 'Express.js' || tech.name === 'MongoDB' || tech.name === 'TypeScript').map(tech => tech.imageLogo)
+    },
+    {
+      id: 6,
+      name: 'TODO Front End App',
+      href: '#',
+      imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg',
+      imageAlt: "Front of mens Basic Tee in gray.",
+      price: '$35',
+      color: 'Gray',
+      tech: tecnologies.filter(tech => tech.name === 'HTML5' || tech.name === 'CSS3' || tech.name === 'JavaScript').map(tech => tech.imageLogo)
     },
     // More products...
   ]
@@ -30,20 +86,34 @@ const products = [
             {products.map((product) => (
               <div key={product.id} className="group relative">
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                  <img
+                  <Image
                     src={product.imageSrc}
                     alt={product.imageAlt}
                     className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                    width={50}
+                    height={50}
                   />
                 </div>
                 <div className="mt-4 flex justify-between">
                   <div>
                     <h3 className="text-sm text-gray-700">
-                      <a href={product.href}>
+                      <Link href={product.href}>
                         <span aria-hidden="true" className="absolute inset-0" />
                         {product.name}
-                      </a>
+                      </Link>
                     </h3>
+                    <div className="flex mt-4 justify-center">
+                    {product.tech && product.tech.map((tech, index) => (
+                      <Image
+                        key={index}
+                        src={tech}
+                        alt={product.imageAlt}
+                        className="h-2 w-2 object-cover object-center lg:h-8 lg:w-8 mx-3"
+                        width={1}
+                        height={1}
+                      />
+                    ))}
+                    </div>
                   </div>
                 </div>
               </div>

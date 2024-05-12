@@ -1,6 +1,6 @@
 
 
-const tecnologies = [
+export const tecnologies = [
     {
         id: 1,
         name: 'React',
