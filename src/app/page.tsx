@@ -19,14 +19,6 @@ export default function Home() {
       <NavBar />
       <main className="flex min-h-screen flex-col items-center justify-between p-3">
         <Hero />
-        <div
-          className=" hidden sm:inline sm:mt-56 lg:mt-1 lg:w-2/3 sm:w-4/5"
-          id="terminal"
-        >
-          <Suspense fallback={<div>Loading...</div>}>
-            <TerminalController />
-          </Suspense>
-        </div>
         <TechStack />
         <Contact />
       </main>
