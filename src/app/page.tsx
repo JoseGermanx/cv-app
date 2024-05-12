@@ -1,18 +1,12 @@
 "use client";
 
-import React, { useEffect } from "react";
 import NavBar from "./ui/Navbar";
 import Hero from "./ui/Hero";
 import Footer from "./ui/Footer";
 import TechStack from "./ui/TechStack";
-import TerminalController from "./ui/Terminal";
 import Contact from "./ui/Contact";
-import { Suspense } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <>
