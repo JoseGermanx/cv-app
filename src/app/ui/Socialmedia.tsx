@@ -19,7 +19,7 @@ export const socialMedia = [
   {
   id: 3,
   name: "Web",
-  imageSrc: "https://simpleicons.org/icons/web.svg",
+  imageSrc: "https://simpleicons.org/icons/microsoftedge.svg",
   imageAlt: "Web",
   link: "https://www.jgxdev.com/",
 }
