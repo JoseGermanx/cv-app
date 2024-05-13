@@ -38,6 +38,13 @@ export const LinksDeInteres = [
     path: "https://devdocs.io/",
     category: "Software Development",
     namebetacode: "devdocs",
+  },
+  {
+    id: 6,
+    name: "Learn JavaScript - Google",
+    path: "https://web.dev/learn/javascript",
+    category: "Software Development",
+    namebetacode: "googlejs",
   }
 ];
 
