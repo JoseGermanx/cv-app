@@ -4,7 +4,7 @@ import Footer from "../ui/Footer";
 import LinksInteres from "../ui/LinksInteres";
 
 export const metadata = {
-  title: "Link de interés - José Germán Martínez",
+  title: "Link de interés",
   description: "Links de interés por José Germán Martínez"
 };
 

@@ -7,7 +7,7 @@ exports[`renders homepage unchanged 1`] = `
   >
     <div
       aria-hidden="true"
-      class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+      class="absolute inset-x-0 -top-40 -z-20 transform-gpu overflow-hidden blur-3xl sm:-top-80"
     >
       <div
         class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
@@ -124,6 +124,34 @@ exports[`renders homepage unchanged 1`] = `
               />
               <a
                 href="https://www.linkedin.com/in/josegermanx/"
+                target="_blank"
+              >
+                <span
+                  aria-hidden="true"
+                  class="absolute inset-0"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            class="group relative"
+          >
+            <div
+              class="aspect-h-1 aspect-w-1 w-full overflow-hidden group-hover:opacity-75 lg:h-auto mx-4"
+            >
+              <img
+                alt="Web"
+                class=" h-5 w-5 object-cover object-center lg:h-10 lg:w-10"
+                data-nimg="1"
+                decoding="async"
+                height="40"
+                loading="lazy"
+                src="https://simpleicons.org/icons/microsoftedge.svg"
+                style="color: transparent;"
+                width="40"
+              />
+              <a
+                href="https://www.jgxdev.com/"
                 target="_blank"
               >
                 <span

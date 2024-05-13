@@ -3,7 +3,7 @@ import BlogLinks from "../ui/BlogLinks";
 import Footer from "../ui/Footer";
 
 export const metadata = {
-  title: "Blog - José Germán Martínez",
+  title: "Blog",
   description: "Blog posts by José Germán Martínez"
 };
 
