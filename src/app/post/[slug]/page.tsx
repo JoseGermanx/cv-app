@@ -28,7 +28,7 @@ const Article = async ({ params }: { params: { slug: string } }) => {
     <>
       <div>
         <NavBar />
-        <div className="flex md:w-64 mb-5 mx-20 mt-9">
+        <div className="flex md:w-64 mb-5 mx-20 mt-16">
           <Link href="/blog">
             <ArrowLeftIcon className="h-6 w-6" />
             <p>back</p>

@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <main className="flex min-h-screen flex-col items-center justify-between p-3">
+      <main className="flex min-h-screen flex-col items-center justify-between p-3 mt-16">
         <Hero />
         <TechStack />
         <Contact />
