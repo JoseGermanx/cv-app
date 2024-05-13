@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const socialMedia = [
+export const socialMedia = [
   {
     id: 1,
     name: "GitHub",
@@ -15,7 +15,14 @@ const socialMedia = [
     imageSrc: "https://simpleicons.org/icons/linkedin.svg",
     imageAlt: "LinkedIn",
     link: "https://www.linkedin.com/in/josegermanx/",
-  }
+  },
+  {
+  id: 3,
+  name: "Web",
+  imageSrc: "https://simpleicons.org/icons/web.svg",
+  imageAlt: "Web",
+  link: "https://www.jgxdev.com/",
+}
 ];
 
 const Socialmedia = () => {
