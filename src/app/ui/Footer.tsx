@@ -8,7 +8,14 @@ const Footer = () => {
     <NavBarBottom />
     <div className="w-full border-t border-gray-200 bg-white py-5 text-center">
     <p className="text-gray-500">
-      A web application made with by {" "}
+      A web application made with <Image
+        src="https://simpleicons.org/icons/nextdotjs.svg"
+        alt="Next.js"
+        width={25}
+        height={25}
+        className="inline"
+      />{" "}
+       by {" "}
       <a
         className="font-medium text-gray-800 underline transition-colors"
         href="https://jgxdev.com"
