@@ -5,6 +5,7 @@ import React from "react";
 import Typed from "typed.js";
 import Socialmedia from "./Socialmedia";
 import Image from "next/image";
+import Badge from "./badge";
 
 const Hero = () => {
   const el = React.useRef(null);
@@ -22,6 +23,13 @@ const Hero = () => {
       // Destroy Typed instance during cleanup to stop animation
       typed.destroy();
     };
+  }, []);
+
+  React.useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "//cdn.credly.com/assets/utilities/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
   }, []);
 
   return (
@@ -72,6 +80,7 @@ const Hero = () => {
         </div>
       </div>
       <Socialmedia />
+      <Badge />
     </div>
   );
 };

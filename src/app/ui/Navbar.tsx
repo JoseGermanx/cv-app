@@ -135,22 +135,30 @@ const NavBar = () => {
             </div>
           </div>
           <div className="flex items-center">
-            {!notificaciones ? <Image
-                  className="h-auto w-5 cursor-pointer"
-                  src="/images/notification-bell-svgrepo-com.png"
-                  alt="Activa las notificaciones"
-                  width={200}
-                  height={200}
-                  onClick={notificar}
-                /> :
-                <Image
-                  className="h-auto w-5"
-                  src="/images/notification-bell-svgrepo-com-blue.png"
-                  alt="Notificaciones activas"
-                  width={200}
-                  height={200}
-                />}
-          
+            <Link
+              href={"https://www.credly.com/badges/e8d1ba54-d1d5-4daa-ac4f-f9bc88c7310f/public_url"}
+              target="_blank"
+             >
+            <Image
+            src={"/images/node-js-developer-advanced.png"}
+            className="h-auto w-10 rounded-full mx-1"
+            alt="Cert"
+            width={500}
+            height={500}
+            />
+            </Link>
+            <Link
+            href={"https://www.credly.com/badges/dc2e7f4c-fb6e-4cab-87db-52e74c5b4808/public_url"}
+            target="_blank"
+            >
+             <Image
+            src={"/images/fullstack-mern-developer.png"}
+            className="h-auto w-10 rounded-full"
+            alt="Cert"
+            width={500}
+            height={500}
+            />
+            </Link>
             <Link
               href="/cv_jose_martinez.pdf"
               className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium mx-2"
@@ -159,6 +167,21 @@ const NavBar = () => {
               CV
             </Link>
             <p>José Germán Martínez</p>
+            {!notificaciones ? <Image
+                  className="h-auto w-5 cursor-pointer mx-2"
+                  src="/images/notification-bell-svgrepo-com.png"
+                  alt="Activa las notificaciones"
+                  width={200}
+                  height={200}
+                  onClick={notificar}
+                /> :
+                <Image
+                  className="h-auto w-5 mx-2"
+                  src="/images/notification-bell-svgrepo-com-blue.png"
+                  alt="Notificaciones activas"
+                  width={200}
+                  height={200}
+                />}
           </div>
         </div>
       </div>
