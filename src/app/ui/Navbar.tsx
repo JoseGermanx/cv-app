@@ -98,7 +98,7 @@ const NavBar = () => {
                 />
               </Link>
             </div>
-            <div className=" hidden sm:ml-6 sm:block">
+            <div className=" hidden lg:ml-6 lg:block">
               <div className="flex space-x-4">
                 {/* <a
                   href="/projects"
