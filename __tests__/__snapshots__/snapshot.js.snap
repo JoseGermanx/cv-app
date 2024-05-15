@@ -165,7 +165,7 @@ exports[`renders homepage unchanged 1`] = `
       </div>
     </div>
     <div
-      class=" bg-zinc-400 sm:hidden lg:flex sm:fixed right-0 my-10 top-1/2 transform -translate-y-1/2 flex-col"
+      class=" bg-zinc-400 hidden lg:flex sm:fixed right-0 my-10 top-1/2 transform -translate-y-1/2 flex-col"
     >
       <div
         data-iframe-height="270"
