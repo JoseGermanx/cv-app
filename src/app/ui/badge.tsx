@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const Badge = () => {
   return (
-    <div className=" bg-zinc-400 sm:hidden lg:flex sm:fixed right-0 my-10 top-1/2 transform -translate-y-1/2 flex-col">
+    <div className=" bg-zinc-400 hidden lg:flex sm:fixed right-0 my-10 top-1/2 transform -translate-y-1/2 flex-col">
       <div
         data-iframe-width="150"
         data-iframe-height="270"
