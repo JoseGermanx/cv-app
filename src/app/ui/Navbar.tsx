@@ -171,10 +171,11 @@ const NavBar = () => {
               CV
             </Link>
             <p>José Germán Martínez</p>
-            {!notificaciones ? <Image
+            {mobile ? null : !notificaciones ? <Image
                   className="h-auto w-5 cursor-pointer mx-2"
                   src="/images/notification-bell-svgrepo-com.png"
                   alt="Activa las notificaciones"
+                  title="Activa las notificaciones"
                   width={200}
                   height={200}
                   onClick={notificar}
@@ -183,9 +184,10 @@ const NavBar = () => {
                   className="h-auto w-5 mx-2"
                   src="/images/notification-bell-svgrepo-com-blue.png"
                   alt="Notificaciones activas"
+                  title="Notificaciones activas"
                   width={200}
                   height={200}
-                />}
+                />} 
           </div>
         </div>
       </div>
