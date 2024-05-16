@@ -88,7 +88,7 @@ export const tecnologies = [
         imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/9/94/Logo-jest.svg',
         imageAlt: "Jest",
         imageLogo: "https://simpleicons.org/icons/jest.svg",
-        focus: "Programming"
+        focus: "DevOps"
     },
     {
         id: 16,
@@ -161,6 +161,22 @@ export const tecnologies = [
         imageAlt: "Astro",
         imageLogo: "https://simpleicons.org/icons/astro.svg",
         focus: "Frontend"
+    },
+    {
+        id: 28,
+        name: 'Git',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg', 
+        imageAlt: "Git",
+        imageLogo: "https://simpleicons.org/icons/git.svg",
+        focus: "DevOps"
+    },
+    {
+        id:29,
+        name: 'GitHub',
+        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg',
+        imageAlt: "GitHub",
+        imageLogo: "https://simpleicons.org/icons/github.svg",
+        focus: "DevOps"
     }
 
 ]
@@ -186,6 +202,7 @@ const TechStack = () => {
                                     width={100}
                                     height={100}
                                 />
+                                {tecnology.name}
                             </div>
                         </div>
                     ))}
@@ -203,6 +220,7 @@ const TechStack = () => {
                                     width={100}
                                     height={100}
                                 />
+                                {tecnology.name}
                             </div>
                         </div>
                     ))}
@@ -220,6 +238,7 @@ const TechStack = () => {
                                     width={100}
                                     height={100}
                                 />
+                                {tecnology.name}
                             </div>
                         </div>
                     ))}
@@ -237,6 +256,7 @@ const TechStack = () => {
                                     width={100}
                                     height={100}
                                 />
+                                {tecnology.name}
                             </div>
                         </div>
                     ))}
