@@ -30,7 +30,7 @@ const Contact = () => {
         },
         (error) => {
             console.log(error);
-          alert("Algo salió mal...", error.text);
+          alert("Algo salió mal... :(", error.text);
         }
       );
   }
