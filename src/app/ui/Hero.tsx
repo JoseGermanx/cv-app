@@ -4,8 +4,7 @@ import Link from "next/link";
 import React from "react";
 import Typed from "typed.js";
 import Socialmedia from "./Socialmedia";
-import Image from "next/image";
-import Badge from "./badge";
+
 
 const Hero = () => {
   const el = React.useRef(null);
@@ -80,7 +79,6 @@ const Hero = () => {
         </div>
       </div>
       <Socialmedia />
-      <Badge />
     </div>
   );
 };
