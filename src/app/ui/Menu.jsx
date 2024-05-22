@@ -11,21 +11,21 @@ import {
 } from '@heroicons/react/24/outline'
 
 const solutions = [
-  { name: 'Todo App - Next 14', description: 'Aplicación construida en Next, utilizando server action', href: 'https://todos-next-sa.jgxweb.site', icon: ChartPieIcon },
-  { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Security', description: "Your customers' data will be safe and secure", href: '#', icon: FingerPrintIcon },
-  { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Todo App - Next 14', description: 'Aplicación construida en Next, utilizando server actions y despliegue CI/CD', href: 'https://todos-next-sa.jgxweb.site', icon: CursorArrowRaysIcon  },
+  { name: 'JGx Agency', description: 'Desarrollo de sitio web para agencia de marketing. Desarrollada con React 18', href: 'https://jgx.agency', icon: ChartPieIcon },
+  // { name: 'Security', description: "Your customers' data will be safe and secure", href: '#', icon: FingerPrintIcon },
+  // { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
+  // { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
 ]
 const callsToAction = [
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Sígueme en YouTube', href: 'https://www.youtube.com/channel/UCUVOMdP_TiQJY3cZk6HGd9A', icon: PlayCircleIcon },
+  { name: 'Contacto', href: '/#contact', icon: PhoneIcon },
 ]
 
 export default function Menu() {
   return (
     <Popover className="relative">
-      <PopoverButton className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-300">
+      <PopoverButton className="inline-flex items-center gap-x-1 text-md font-semibold leading-6 text-white">
         <span>Proyectos</span>
         <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
       </PopoverButton>

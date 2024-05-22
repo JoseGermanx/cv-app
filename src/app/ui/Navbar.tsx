@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-// import  Menu  from "./Menu";
+import  Menu  from "./Menu";
 
 const NavBar = () => {
   const [notificaciones, setNotificaciones] = useState (false);
@@ -136,11 +136,12 @@ const NavBar = () => {
                 >
                   Blog
                 </Link>
-                {/* <span
-                 className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">
+                <div
+                  className="flex items-center bg-gray-500 hover:bg-gray-700 hover:text-white rounded-md px-3"
+                 >
                 <Menu
                 />
-                </span> */}
+                </div>
               </div>
             </div>
           </div>
@@ -197,36 +198,6 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-
-      {/* <div className="sm:hidden" id="mobile-menu">
-        <div className="space-y-1 px-2 pb-3 pt-2">
-          <a
-            href="#"
-            className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
-            aria-current="page"
-          >
-            Dashboard
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >
-            Team
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >
-            Projects
-          </a>
-          <a
-            href="#"
-            className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-          >
-            Calendar
-          </a>
-        </div>
-      </div> */}
     </nav>
   );
 };
