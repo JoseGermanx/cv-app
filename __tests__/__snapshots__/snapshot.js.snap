@@ -164,22 +164,6 @@ exports[`renders homepage unchanged 1`] = `
         </div>
       </div>
     </div>
-    <div
-      class=" bg-zinc-400 hidden lg:flex sm:fixed right-0 my-10 top-1/2 transform -translate-y-1/2 flex-col"
-    >
-      <div
-        data-iframe-height="270"
-        data-iframe-width="150"
-        data-share-badge-host="https://www.credly.com"
-        data-share-badge-id="e8d1ba54-d1d5-4daa-ac4f-f9bc88c7310f"
-      />
-      <div
-        data-iframe-height="270"
-        data-iframe-width="150"
-        data-share-badge-host="https://www.credly.com"
-        data-share-badge-id="dc2e7f4c-fb6e-4cab-87db-52e74c5b4808"
-      />
-    </div>
   </div>
 </div>
 `;
