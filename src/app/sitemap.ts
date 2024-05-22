@@ -10,7 +10,7 @@ export default async function sitemap() {
 
     const postUrls = posts.map((post) => {
         return {
-            url: `${baseUrl}/blog/${post.id}`,
+            url: `${baseUrl}/post/${post.id}`,
             lastModified: new Date(post.date),
             changeFrequency: 'weekly',
         }
