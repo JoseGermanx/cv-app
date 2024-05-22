@@ -25,7 +25,7 @@ const callsToAction = [
 export default function Menu() {
   return (
     <Popover className="relative">
-      <PopoverButton className="inline-flex items-center gap-x-1 text-md font-semibold leading-6 text-white">
+      <PopoverButton className="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-white">
         <span>Proyectos</span>
         <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
       </PopoverButton>
