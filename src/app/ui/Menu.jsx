@@ -7,13 +7,14 @@ import {
   CursorArrowRaysIcon,
   FingerPrintIcon,
   SquaresPlusIcon,
+  SparklesIcon
   
 } from '@heroicons/react/24/outline'
 
 const solutions = [
-  { name: 'Todo App - Next 14', description: 'Aplicación construida en Next, utilizando server actions y despliegue CI/CD', href: 'https://todos-next-sa.jgxweb.site', icon: CursorArrowRaysIcon  },
-  { name: 'JGx Agency', description: 'Desarrollo de sitio web para agencia de marketing. Desarrollada con React 18', href: 'https://jgx.agency', icon: ChartPieIcon },
-  // { name: 'Security', description: "Your customers' data will be safe and secure", href: '#', icon: FingerPrintIcon },
+  { name: 'Todo App - Next 14', description: 'Aplicación construida en Next, utilizando server actions y despliegue CI/CD con GitHub Actions', href: 'https://todos-next-sa.jgxweb.site', icon: CursorArrowRaysIcon  },
+  { name: 'JGx Agency - React', description: 'Desarrollo de sitio web para agencia de marketing. Desarrollada con React 18', href: 'https://jgx.agency', icon: ChartPieIcon },
+  { name: 'AI Chat Learning Assintant - Gemini - React ', description: "Aplicación Chat de inteligencia artificial creado con Google Gemini", href: 'https://asistente-js.vercel.app/', icon: SparklesIcon },
   // { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
   // { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
 ]
