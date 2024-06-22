@@ -7,15 +7,16 @@ import {
   CursorArrowRaysIcon,
   FingerPrintIcon,
   SquaresPlusIcon,
-  SparklesIcon
+  SparklesIcon,
+  ArrowsPointingInIcon
   
 } from '@heroicons/react/24/outline'
 
 const solutions = [
-  { name: 'Todo App - Next 14', description: 'Aplicación construida en Next, utilizando server actions y despliegue CI/CD con GitHub Actions', href: 'https://todos-next-sa.jgxweb.site', icon: CursorArrowRaysIcon  },
+  { name: 'Todo App - Next 14', description: 'Aplicación construida en Next, utilizando server actions y despliegue CI/CD con GitHub Actions. Testing con Jest', href: 'https://todos-next-sa.jgxweb.site', icon: CursorArrowRaysIcon  },
   { name: 'JGx Agency - React', description: 'Desarrollo de sitio web para agencia de marketing. Desarrollada con React 18', href: 'https://jgx.agency', icon: ChartPieIcon },
   { name: 'AI Chat Learning Assintant - Gemini - React ', description: "Aplicación Chat de inteligencia artificial creado con Google Gemini", href: 'https://asistente-js.vercel.app/', icon: SparklesIcon },
-  // { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
+  { name: 'Star Wars API UI - React', description: 'Aplicación de React para consumir una API de Star Wars, manejo de contexto global de la aplicación con API Context, enrutado y datos locales.', href: 'https://star-wars-blog-chi.vercel.app/', icon: ArrowsPointingInIcon },
   // { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
 ]
 const callsToAction = [
