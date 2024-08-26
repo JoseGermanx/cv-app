@@ -10,6 +10,7 @@ export default function Home() {
 
   return (
     <>
+    Impact-Site-Verification: 2d1ed664-0cd5-41f3-b60c-4464607c8d27
       <NavBar />
       <main className="flex min-h-screen flex-col items-center justify-between p-3 mt-16 bg-gradient-to-bl from-gray-100 to-slate-300">
         <Hero />
