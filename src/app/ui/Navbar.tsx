@@ -125,6 +125,13 @@ const NavBar = () => {
                   Newsletter
                 </Link>
                 <Link
+                  href="https://www.superprof.cl/aprende-javascript-transforma-carrera-tecnologia-soy-graduado-ingenieria-puedo-ayudar-dar-pasos-firmes-este.html"
+                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  target="_blank"
+                >
+                  Agenda una clase
+                </Link>
+                <Link
                   href="/terminal"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
