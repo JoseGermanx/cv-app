@@ -11,6 +11,7 @@ const NavBarBottom = () => {
             <Link href="/" className="px-4">Inicio</Link>
             <Link href="/blog" className="px-4">Blog</Link>
             <Link href="/cv_jose_martinez.pdf" className="px-4">CV</Link>
+            <Link href="https://www.superprof.cl/aprende-javascript-transforma-carrera-tecnologia-soy-graduado-ingenieria-puedo-ayudar-dar-pasos-firmes-este.html" className="px-4" target="_blank">Agenda una clase</Link>
             <Link href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7078460407316635648" className="px-4">Newsletter</Link>
             </div>
         </div>
