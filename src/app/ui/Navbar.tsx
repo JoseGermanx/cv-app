@@ -118,7 +118,7 @@ const NavBar = () => {
                   Contacto
                 </Link>
                 <Link
-                  href="https://techmarketingpulse.beehiiv.com/subscribe"
+                  href="https://www.linkedin.com/newsletters/7078460407316635648/"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   target="_blank"
                 >
@@ -144,7 +144,7 @@ const NavBar = () => {
                   Blog
                 </Link>
                 <div
-                  className="flex items-center bg-gray-500 hover:bg-gray-700 hover:text-white rounded-md px-3"
+                  className="flex items-center bg-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3"
                  >
                 <Menu
                 />

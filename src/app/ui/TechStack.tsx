@@ -63,15 +63,7 @@ export const tecnologies = [
         name: 'AWS',
         imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
         imageAlt: "AWS",
-        imageLogo: "https://simpleicons.org/icons/amazonaws.svg",
-        focus: "DevOps"
-    },
-    {
-        id: 11,
-        name: 'Azure',
-        imageSrc: 'https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg',
-        imageAlt: "Azure",
-        imageLogo: "https://simpleicons.org/icons/microsoftazure.svg",
+        imageLogo: "https://simpleicons.org/icons/amazonwebservices.svg",
         focus: "DevOps"
     },
     {

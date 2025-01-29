@@ -8,20 +8,15 @@ export const socialMedia = [
     imageSrc: "https://simpleicons.org/icons/github.svg",
     imageAlt: "GitHub",
     link: "https://www.github.com/josegermanx/",
-  },
-  {
-    id: 2,
-    name: "LinkedIn",
-    imageSrc: "https://simpleicons.org/icons/linkedin.svg",
-    imageAlt: "LinkedIn",
-    link: "https://www.linkedin.com/in/josegermanx/",
+    toltip: "GitHub"
   },
   {
   id: 3,
   name: "Web",
-  imageSrc: "https://simpleicons.org/icons/microsoftedge.svg",
+  imageSrc: "https://simpleicons.org/icons/googlechrome.svg",
   imageAlt: "Web",
   link: "https://www.jgxdev.com/",
+  toltip: "Web Site"
 }
 ];
 
