@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 import Typed from "typed.js";
 import Socialmedia from "./Socialmedia";
+import TrueFocus from "./TrueFocus";
 
 
 const Hero = () => {
@@ -48,14 +49,22 @@ const Hero = () => {
       <div className="mx-auto max-w-2xl py-4 sm:py-4 lg:py-4">
         <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
         <div className="text-center">
+          <TrueFocus
+            sentence="Software Developer"
+            manualMode={true}
+            blurAmount={5}
+            borderColor="blue"
+            animationDuration={2}
+            pauseBetweenAnimations={1}
+          />
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            <span className=" text-indigo-600">Software</span> Developer
+            <span className=" text-indigo-600">José Germán</span>
           </h1>
           <h2 className="text-1xl font-bold tracking-tight text-gray-900 sm:text-2xl mt-3">
             <span ref={el} className=" text-gray-600"></span>
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Mi nombre es José Germán, tengo +10 años de experiencia como desarrollador web y actualmente ayudo a estudiantes
+            +10 años de experiencia como desarrollador web y actualmente ayudo a estudiantes
             de desarrollo Full Stack en JavaScript.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
