@@ -47,7 +47,7 @@ const NavBar = () => {
   }, [notificaciones])
 
   return (
-    <nav className=" bg-slate-300 mx-auto w-full px-2 sm:px-6 lg:px-8 fixed z-50 top-0">
+    <nav className=" bg-orange-300 mx-auto w-full px-2 sm:px-6 lg:px-8 fixed z-50 top-0">
       <div className="mx-auto w-full px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           {/* <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -98,31 +98,18 @@ const NavBar = () => {
                   className="h-auto w-10"
                   src="/images/jgxdev_logo.png"
                   alt="jgxdev"
-                  width={500}
-                  height={500}
+                  width={700}
+                  height={700}
                 />
               </Link>
             </div>
             <div className=" hidden lg:ml-6 lg:block">
               <div className="flex space-x-4">
-                {/* <a
-                  href="/projects"
-                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >
-                  Proyectos
-                </a> */}
                 <Link
                   href="/#contact"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Contacto
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/newsletters/7078460407316635648/"
-                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  target="_blank"
-                >
-                  Newsletter
                 </Link>
                 <Link
                   href="https://www.superprof.cl/aprende-javascript-transforma-carrera-tecnologia-soy-graduado-ingenieria-puedo-ayudar-dar-pasos-firmes-este.html"
@@ -137,12 +124,7 @@ const NavBar = () => {
                 >
                   Terminal
                   </Link>
-                  <Link
-                  href="/blog"
-                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >
-                  Blog
-                </Link>
+                 
                 <div
                   className="flex items-center bg-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3"
                  >
@@ -178,11 +160,11 @@ const NavBar = () => {
             />
             </Link>
             <Link
-              href="/cv_jose_martinez.pdf"
+              href="/blog"
               className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium mx-2"
               aria-current="page"
             >
-              CV
+              Blog
             </Link>
             <p>José Germán Martínez</p>
             {mobile ? null : !notificaciones ? <Image
