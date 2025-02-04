@@ -176,8 +176,8 @@ export const tecnologies = [
 const TechStack = () => {
     return (
         <div>
-            <div className=" mt-24 mx-auto max-w-2xl px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-                <h2 className="text-5xl font-bold tracking-tight text-gray-900 text-center mb-5">Tecnologías</h2>
+            <div className=" mt-10 mx-auto max-w-2xl px-4 sm:px-6 sm:py-24 lg:max-w-2xl lg:px-8 text-white">
+                <h2 className="text-5xl font-bold tracking-tight text-center mb-5">Tecnologías</h2>
 
                 <p className="mt-6 text-lg leading-8 text-gray-600">
                     Estas son algunas de las tecnologías que he utilizado en mis proyectos.
