@@ -36,17 +36,17 @@ const Contact = () => {
   }
   return (
     <section id="contact" className="relative text-white">
-      <h2 className="text-5xl font-bold tracking-tight  text-center mb-5">
+      <h2 className="text-5xl font-bold tracking-tight text-center mb-5">
         Contacto
       </h2>
-      <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
+      <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap justify-center">
         <form
           ref={form}
           name="contact"
           onSubmit={handleSubmit}
-          className="w-full flex flex-col md:ml-auto md:py-8 mt-8 md:mt-0"
+          className="w-full flex flex-col md:ml-auto md:py-8 mt-8 md:mt-0 max-w-lg"
         >
-          <h2 className=" sm:text-4xl text-3xl mb-1 font-medium title-font">
+          <h2 className="sm:text-4xl text-3xl mb-1 font-medium title-font">
             ¡Ponte en contacto!
           </h2>
           <p className="leading-relaxed mb-5">
@@ -77,10 +77,7 @@ const Contact = () => {
             />
           </div>
           <div className="relative mb-4">
-            <label
-              htmlFor="service"
-              className="leading-7 text-sm"
-            >
+            <label htmlFor="service" className="leading-7 text-sm">
               Motivo de tu contacto
             </label>
             <select
@@ -92,25 +89,14 @@ const Contact = () => {
               <option defaultValue>Selecciona uno</option>
               <option value="desarrollo-de-software">Desarrollo de software</option>
               <option value="asesoria-de-software">Asesoría de software</option>
-              <option value="diseno-web">
-                Desarrollo de páginas web
-              </option>
-              <option value="un-cafe">
-                Invitarte a un café
-              </option>
-              <option value="participar-en-un-evento">
-                Invitación a eventos
-              </option>
-              <option value="clases-de-programacion">
-                Solicitud de clases de programación
-              </option>
+              <option value="diseno-web">Desarrollo de páginas web</option>
+              <option value="un-cafe">Invitarte a un café</option>
+              <option value="participar-en-un-evento">Invitación a eventos</option>
+              <option value="clases-de-programacion">Solicitud de clases de programación</option>
             </select>
           </div>
           <div className="relative mb-4">
-            <label
-              htmlFor="message"
-              className="leading-7 text-sm"
-            >
+            <label htmlFor="message" className="leading-7 text-sm">
               Indica un poco más sobre tu contacto
             </label>
             <textarea
@@ -122,7 +108,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg w-1/2 self-center"
           >
             Enviar
           </button>
