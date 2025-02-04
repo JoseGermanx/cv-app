@@ -133,7 +133,6 @@ const NavBar = () => {
             >
               Blog
             </Link>
-            <p>José Germán Martínez</p>
             {mobile ? null : !notificaciones ? <Image
                   className="h-auto w-5 cursor-pointer mx-2"
                   src="/images/notification-bell-svgrepo-com.png"
