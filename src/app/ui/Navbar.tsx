@@ -79,13 +79,6 @@ const NavBar = () => {
                   Contacto
                 </Link>
                 <Link
-                  href="https://www.linkedin.com/newsletters/7078460407316635648/"
-                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                  target="_blank"
-                >
-                  Newsletter
-                </Link>
-                <Link
                   href="https://www.superprof.cl/aprende-javascript-transforma-carrera-tecnologia-soy-graduado-ingenieria-puedo-ayudar-dar-pasos-firmes-este.html"
                   className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   target="_blank"
@@ -98,12 +91,7 @@ const NavBar = () => {
                 >
                   Terminal
                   </Link>
-                  <Link
-                  href="/blog"
-                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                >
-                  Blog
-                </Link>
+                 
                 <div
                   className="flex items-center bg-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3"
                  >
@@ -140,11 +128,11 @@ const NavBar = () => {
             />
             </Link>
             <Link
-              href="/cv_jose_martinez.pdf"
+              href="/blog"
               className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium mx-2"
               aria-current="page"
             >
-              CV
+              Blog
             </Link>
             <p>José Germán Martínez</p>
             {mobile ? null : !notificaciones ? <Image

@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/ui/Contact.jsx", "src/app/ui/Podcast.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/ui/Contact.jsx", "src/app/ui/Podcast.jsx", "src/app/ui/TrueFocus.jsx"],
   "exclude": ["node_modules"]
 }
