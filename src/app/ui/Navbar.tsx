@@ -61,13 +61,12 @@ const NavBar = () => {
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
-              src="/images/jgxdev_logo.png"
+              src="/images/jgxdev_logo_dev.png"
               alt="jgxdev"
-              width="80"
+              width="180"
               height="80"
-              className="h-auto w-10"
+              className="h-auto w-40"
             ></Image>
-            <p><strong>JGx</strong><span className="text-blue-400">Dev</span></p>
           </Link>
           <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
             <div className=" hidden lg:ml-6 lg:block">
