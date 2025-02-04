@@ -53,7 +53,7 @@ const NavBar = () => {
   return (
     <nav className=" z-50 top-0">
       <div
-        className={`fixed top-0 w-full ${scrolled
+        className={`flex fixed top-0 w-full ${scrolled
           ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
           : "bg-white/0"
         } z-30 transition-all`}
@@ -70,9 +70,6 @@ const NavBar = () => {
             <p><strong>JGx</strong><span className="text-blue-400">Dev</span></p>
           </Link>
           <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-start">
-              
-            </div>
             <div className=" hidden lg:ml-6 lg:block">
               <div className="flex space-x-4">
                 <Link
