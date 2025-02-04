@@ -69,6 +69,53 @@ const NavBar = () => {
             ></Image>
             <p><strong>JGx</strong><span className="text-blue-400">Dev</span></p>
           </Link>
+          <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
+            <div className="flex flex-shrink-0 items-start">
+              
+            </div>
+            <div className=" hidden lg:ml-6 lg:block">
+              <div className="flex space-x-4">
+                <Link
+                  href="/#contact"
+                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                >
+                  Contacto
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/newsletters/7078460407316635648/"
+                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  target="_blank"
+                >
+                  Newsletter
+                </Link>
+                <Link
+                  href="https://www.superprof.cl/aprende-javascript-transforma-carrera-tecnologia-soy-graduado-ingenieria-puedo-ayudar-dar-pasos-firmes-este.html"
+                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  target="_blank"
+                >
+                  Agenda una clase
+                </Link>
+                <Link
+                  href="/terminal"
+                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                >
+                  Terminal
+                  </Link>
+                  <Link
+                  href="/blog"
+                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                >
+                  Blog
+                </Link>
+                <div
+                  className="flex items-center bg-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3"
+                 >
+                <Menu
+                />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         
       </div>
