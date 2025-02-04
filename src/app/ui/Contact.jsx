@@ -35,8 +35,8 @@ const Contact = () => {
       );
   }
   return (
-    <section id="contact" className="relative">
-      <h2 className="text-5xl font-bold tracking-tight text-gray-900 text-center mb-5">
+    <section id="contact" className="relative text-white">
+      <h2 className="text-5xl font-bold tracking-tight  text-center mb-5">
         Contacto
       </h2>
       <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -46,7 +46,7 @@ const Contact = () => {
           onSubmit={handleSubmit}
           className="w-full flex flex-col md:ml-auto md:py-8 mt-8 md:mt-0"
         >
-          <h2 className="text-gray-900 sm:text-4xl text-3xl mb-1 font-medium title-font">
+          <h2 className=" sm:text-4xl text-3xl mb-1 font-medium title-font">
             ¡Ponte en contacto!
           </h2>
           <p className="leading-relaxed mb-5">
