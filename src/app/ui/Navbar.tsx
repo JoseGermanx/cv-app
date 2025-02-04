@@ -51,11 +51,11 @@ const NavBar = () => {
   }, [notificaciones])
 
   return (
-    <nav className=" z-50 top-0">
+    <nav className="z-1000 top-0 text-white">
       <div
         className={`flex fixed top-0 w-full ${scrolled
-          ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
-          : "bg-white/0"
+          ? " bg-gray-700/50 backdrop-blur-xl"
+          : "bg-gray-700 backdrop-blur-xl"
         } z-30 transition-all`}
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
