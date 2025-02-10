@@ -4,10 +4,14 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import  Menu  from "./Menu";
+import useScroll from "../lib/hooks/use-scroll";
+
 
 const NavBar = () => {
   const [notificaciones, setNotificaciones] = useState (false);
   const [mobile, setMobile] = useState(false);
+
+  const scrolled = useScroll(50);
 
   const notificar = () => {
     if (Notification.permission === "granted") {
@@ -47,62 +51,24 @@ const NavBar = () => {
   }, [notificaciones])
 
   return (
-    <nav className=" bg-orange-300 mx-auto w-full px-2 sm:px-6 lg:px-8 fixed z-50 top-0">
-      <div className="mx-auto w-full px-2 sm:px-6 lg:px-8">
-        <div className="relative flex h-16 items-center justify-between">
-          {/* <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button
-              type="button"
-              className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              aria-controls="mobile-menu"
-              aria-expanded="false"
-            >
-              <span className="absolute -inset-0.5"></span>
-              <span className="sr-only">Open main menu</span>
-
-              <svg
-                className="block h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-
-              <svg
-                className="hidden h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div> */}
+    <nav className="z-1000 top-0 text-white">
+      <div
+        className={`flex fixed top-0 w-full ${scrolled
+          ? " bg-gray-700/50 backdrop-blur-xl"
+          : "bg-gray-700 backdrop-blur-xl"
+        } z-30 transition-all`}
+      >
+        <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
+          <Link href="/" className="flex items-center font-display text-2xl">
+            <Image
+              src="/images/jgxdev_logo_dev_jose_german.png"
+              alt="jgxdev"
+              width="180"
+              height="80"
+              className="h-auto w-40"
+            ></Image>
+          </Link>
           <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-start">
-              <Link href="/">
-                <Image
-                  className="h-auto w-10"
-                  src="/images/jgxdev_logo.png"
-                  alt="jgxdev"
-                  width={700}
-                  height={700}
-                />
-              </Link>
-            </div>
             <div className=" hidden lg:ml-6 lg:block">
               <div className="flex space-x-4">
                 <Link
@@ -134,7 +100,8 @@ const NavBar = () => {
               </div>
             </div>
           </div>
-          <div className="flex items-center">
+        </div>
+        <div className="flex items-center">
             <Link
               href={"https://www.credly.com/badges/e8d1ba54-d1d5-4daa-ac4f-f9bc88c7310f/public_url"}
               target="_blank"
@@ -166,7 +133,6 @@ const NavBar = () => {
             >
               Blog
             </Link>
-            <p>José Germán Martínez</p>
             {mobile ? null : !notificaciones ? <Image
                   className="h-auto w-5 cursor-pointer mx-2"
                   src="/images/notification-bell-svgrepo-com.png"
@@ -185,7 +151,6 @@ const NavBar = () => {
                   height={200}
                 />} 
           </div>
-        </div>
       </div>
     </nav>
   );

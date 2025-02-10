@@ -12,7 +12,7 @@ describe("Page", () => {
   it("renders a heading with the correct text", () => {
     render(<Hero />);
     const heading = screen.getByRole("heading", { level: 1 });
-    expect(heading).toHaveTextContent("Software Developer");
+    expect(heading).toHaveTextContent("José Germán");
   });
 
   it("renders a subheading", () => {
@@ -24,7 +24,7 @@ describe("Page", () => {
   //testear que exita al menos una fracción de cadena de texto dentro de un parrafo del documento getByText
   it("renders a paragraph with the correct text", () => {
     render(<Hero />);
-    const paragraph = screen.getByText(/José Germán/i);
+    const paragraph = screen.getByText(/desarrollador web/i);
     expect(paragraph).toBeInTheDocument();
   });
 

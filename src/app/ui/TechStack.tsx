@@ -176,86 +176,35 @@ export const tecnologies = [
 const TechStack = () => {
     return (
         <div>
-            <div className=" mt-24 mx-auto max-w-2xl px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-                <h2 className="text-5xl font-bold tracking-tight text-gray-900 text-center mb-5">Tecnologías</h2>
+            <div className=" mt-10 mx-auto max-w-2xl px-4 sm:px-6 sm:py-24 lg:max-w-3xl lg:px-8 text-white">
+                <h2 className="text-5xl font-bold tracking-tight text-center mb-5">Tecnologías</h2>
 
                 <p className="mt-6 text-lg leading-8 text-gray-600">
                     Estas son algunas de las tecnologías que he utilizado en mis proyectos.
                 </p>
-                <h3 className="text-3xl mb-3 mt-3">Front end</h3>
-                <div className="mt-6 grid grid-cols-3 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-8 xl:gap-x-8 justify-center ">
-                    {tecnologies.filter(tec => tec.focus === "Frontend").map((tecnology) => (
-                        <div key={tecnology.id} className="group relative">
-                            <div className="aspect-h-1 aspect-w-1 w-auto overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75">
-                                <Image
-                                    src={tecnology.imageLogo}
-                                    alt={tecnology.imageAlt}
-                                    className=" h-10 w-10 object-cover object-center lg:h-15 lg:w-15"
-                                    width={100}
-                                    height={100}
-                                />
-                                {tecnology.name}
-                            </div>
+                {["Frontend", "Backend", "Programming", "DevOps"].map((focus) => (
+                    <div key={focus}>
+                        <h3 className="text-3xl mb-3 mt-3">{focus}</h3>
+                        <div className={`text-black mt-6 grid grid-cols-3 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-8 xl:gap-x-8 justify-center bg-gray-300 p-14 rounded-md shadow-lg shadow-gray-700`}>
+                            {tecnologies.filter(tec => tec.focus === focus).map((tecnology) => (
+                                <div key={tecnology.id} className="group relative">
+                                    <div className="aspect-h-1 aspect-w-1 w-auto overflow-hidden lg:aspect-none group-hover:opacity-75">
+                                        <Image
+                                            src={tecnology.imageLogo}
+                                            alt={tecnology.imageAlt}
+                                            className="hover:scale-110 h-10 w-10 object-cover object-center lg:h-15 lg:w-15"
+                                            width={100}
+                                            height={100}
+                                        />
+                                        <p className="mt-2 font-thin text-xs text-center hover:font-normal">{tecnology.name}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
+                ))}
                 </div>
-                <hr className="mt-10" />
-                <h3 className="text-3xl mb-3 mt-3">Back end</h3>
-                <div className="mt-6 grid grid-cols-3 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-8 xl:gap-x-8 justify-center ">
-                    {tecnologies.filter(tec => tec.focus === "Backend").map((tecnology) => (
-                        <div key={tecnology.id} className="group relative">
-                            <div className="aspect-h-1 aspect-w-1 w-auto overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75">
-                                <Image
-                                    src={tecnology.imageLogo}
-                                    alt={tecnology.imageAlt}
-                                    className=" h-10 w-10 object-cover object-center lg:h-15 lg:w-15"
-                                    width={100}
-                                    height={100}
-                                />
-                                {tecnology.name}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <hr className="mt-10" />
-                <h3 className="text-3xl mb-3 mt-3">Lenguajes y herramientas</h3>
-                <div className="mt-6 grid grid-cols-3 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-8 xl:gap-x-8 justify-center ">
-                    {tecnologies.filter(tec => tec.focus === "Programming").map((tecnology) => (
-                        <div key={tecnology.id} className="group relative">
-                            <div className="aspect-h-1 aspect-w-1 w-auto overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75">
-                                <Image
-                                    src={tecnology.imageLogo}
-                                    alt={tecnology.imageAlt}
-                                    className=" h-10 w-10 object-cover object-center lg:h-15 lg:w-15"
-                                    width={100}
-                                    height={100}
-                                />
-                                {tecnology.name}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <hr className="mt-10" />
-                <h3 className="text-3xl mb-3 mt-3">DevOps y operaciones</h3>
-                <div className="mt-6 grid grid-cols-3 gap-x-6 gap-y-10 sm:grid-cols-3 md:grid-cols-8 xl:gap-x-8 justify-center ">
-                    {tecnologies.filter(tec => tec.focus === "DevOps").map((tecnology) => (
-                        <div key={tecnology.id} className="group relative">
-                            <div className="aspect-h-1 aspect-w-1 w-auto overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75">
-                                <Image
-                                    src={tecnology.imageLogo}
-                                    alt={tecnology.imageAlt}
-                                    className=" h-10 w-10 object-cover object-center lg:h-15 lg:w-15"
-                                    width={100}
-                                    height={100}
-                                />
-                                {tecnology.name}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <hr className="mt-10" />
             </div>
-        </div>
     )
 }
 

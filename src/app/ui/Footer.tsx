@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <>
     <NavBarBottom />
-    <div className="w-full border-t border-gray-200 bg-white py-5 text-center">
-    <p className="text-gray-500">
+    <div className="bg-gray-700 w-full py-5 text-center text-white">
+    <p className="text-gray-200">
       A web application made with <Image
         src="https://simpleicons.org/icons/nextdotjs.svg"
         alt="Next.js"
@@ -17,7 +17,7 @@ const Footer = () => {
       />{" "}
        by {" "}
       <a
-        className="font-medium text-gray-800 underline transition-colors"
+        className="font-medium text-gray-200 underline transition-colors"
         href="https://jgxdev.com"
         target="_blank"
         rel="noopener noreferrer"
