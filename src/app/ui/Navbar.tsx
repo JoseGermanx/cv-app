@@ -60,39 +60,40 @@ const NavBar = () => {
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
           <Link href="/" className="flex items-center font-display text-2xl">
-            <Image
+            {/* <Image
               src="/images/jgxdev_logo_dev_jose_german.png"
               alt="jgxdev"
               width="180"
               height="80"
               className="h-auto w-40"
-            ></Image>
+            ></Image> */}
+            <span className=" text-blue-400">jgxdev</span>
           </Link>
           <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
             <div className=" hidden lg:ml-6 lg:block">
               <div className="flex space-x-4">
                 <Link
                   href="/#contact"
-                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Contacto
                 </Link>
                 <Link
                   href="https://www.superprof.cl/aprende-javascript-transforma-carrera-tecnologia-soy-graduado-ingenieria-puedo-ayudar-dar-pasos-firmes-este.html"
-                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   target="_blank"
                 >
                   Agenda una clase
                 </Link>
                 <Link
                   href="/terminal"
-                  className="bg-gray-900 text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  className="bg-gray-900 text-gray-300 hover:bg-gray-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                 >
                   Terminal
                   </Link>
                  
                 <div
-                  className="flex items-center bg-gray-900 hover:bg-gray-700 hover:text-white rounded-md px-3"
+                  className="flex items-center bg-gray-900 hover:bg-gray-800 hover:text-white rounded-md px-3"
                  >
                 <Menu
                 />
