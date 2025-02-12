@@ -58,7 +58,7 @@ const Hero = () => {
             pauseBetweenAnimations={1}
           />
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            <span className=" text-orange-400">José Germán</span>
+            <span className=" text-blue-400">José Germán</span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             +10 años de experiencia como desarrollador web y actualmente ayudo a estudiantes
