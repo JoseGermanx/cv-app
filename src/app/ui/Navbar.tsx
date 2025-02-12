@@ -67,7 +67,7 @@ const NavBar = () => {
               height="80"
               className="h-auto w-40"
             ></Image> */}
-            <span className=" text-blue-400">jgxdev</span>
+            <span className=" text-blue-400 text-3xl">jgxdev</span>
           </Link>
           <div className="flex flex-1 items-center sm:items-stretch sm:justify-start">
             <div className=" hidden lg:ml-6 lg:block">
