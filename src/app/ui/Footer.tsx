@@ -29,9 +29,11 @@ const Footer = () => {
             José Germán Martínez
           </a>
         </p>
+        <a href="https://betacode.cl" target='_blank'>
         <p className="text-slate-700 text-xs mt-1.5">
           BetaCode Servicios Digitales e Informáticos E.I.R.L.
         </p>
+        </a>
         <div className="flex justify-center items-center gap-1.5 mt-3">
           <a
             href="https://dev.to/josegermanx"
