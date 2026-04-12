@@ -7,16 +7,29 @@ import TechStack from "./ui/TechStack";
 import Contact from "./ui/Contact";
 
 export default function Home() {
-
   return (
-    <>
+    <div style={{ background: "#07090f", minHeight: "100vh" }}>
       <NavBar />
-      <main className="flex min-h-screen flex-col items-center justify-between p-3 mt-16 bg-gradient-to-bl from-black to-slate-900">
+      <main className="flex flex-col items-center pt-16">
         <Hero />
+        <div
+          className="w-full max-w-4xl mx-auto"
+          style={{
+            height: "1px",
+            background: "linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent)",
+          }}
+        />
         <TechStack />
+        <div
+          className="w-full max-w-4xl mx-auto"
+          style={{
+            height: "1px",
+            background: "linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent)",
+          }}
+        />
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

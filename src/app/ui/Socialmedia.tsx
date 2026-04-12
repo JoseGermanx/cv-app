@@ -8,41 +8,49 @@ export const socialMedia = [
     imageSrc: "/images/github.svg",
     imageAlt: "GitHub",
     link: "https://www.github.com/josegermanx/",
-    toltip: "GitHub"
   },
   {
-  id: 3,
-  name: "LinkedIn",
-  imageSrc: "/images/linkedin.svg",
-  imageAlt: "LinkedInd",
-  link: "https://www.linkedin.com/in/josegermanx/",
-  toltip: "Web Site"
-}
+    id: 3,
+    name: "LinkedIn",
+    imageSrc: "/images/linkedin.svg",
+    imageAlt: "LinkedIn",
+    link: "https://www.linkedin.com/in/josegermanx/",
+  },
 ];
 
 const Socialmedia = () => {
   return (
-    <div>
-      <div className="flex-col mt-9">
-        <div className="flex justify-center">
-          {socialMedia.map((social) => (
-            <div key={social.id} className="group relative">
-              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden group-hover:opacity-75 lg:h-auto mx-4">
-                <Image
-                  src={social.imageSrc}
-                  alt={social.imageAlt}
-                  width={40}
-                  height={40}
-                  className=" h-5 w-5 object-cover object-center lg:h-10 lg:w-10"
-                />
-                <a href={social.link} target="_blank">
-                  <span aria-hidden="true" className="absolute inset-0" />
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+    <div className="flex justify-center gap-4 mt-8">
+      {socialMedia.map((social) => (
+        <a
+          key={social.id}
+          href={social.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={social.name}
+          className="group flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200"
+          style={{
+            background: "rgba(255,255,255,0.05)",
+            border: "1px solid rgba(255,255,255,0.1)",
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLElement).style.borderColor = "rgba(96,165,250,0.5)";
+            (e.currentTarget as HTMLElement).style.background = "rgba(96,165,250,0.1)";
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.1)";
+            (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.05)";
+          }}
+        >
+          <Image
+            src={social.imageSrc}
+            alt={social.imageAlt}
+            width={18}
+            height={18}
+            className="opacity-60 group-hover:opacity-100 transition-opacity invert"
+          />
+        </a>
+      ))}
     </div>
   );
 };

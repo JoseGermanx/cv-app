@@ -6,87 +6,120 @@ import Typed from "typed.js";
 import Socialmedia from "./Socialmedia";
 import TrueFocus from "./TrueFocus";
 
-
 const Hero = () => {
   const el = React.useRef(null);
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
       strings: ["FullStack", "Frontend", "Backend"],
-      typeSpeed: 100,
+      typeSpeed: 90,
       loop: true,
       showCursor: true,
-      backDelay: 1000,
+      backDelay: 1200,
     });
-
-    return () => {
-      // Destroy Typed instance during cleanup to stop animation
-      typed.destroy();
-    };
+    return () => typed.destroy();
   }, []);
 
   React.useEffect(() => {
-    const script = document.createElement('script');
+    const script = document.createElement("script");
     script.src = "//cdn.credly.com/assets/utilities/embed.js";
     script.async = true;
     document.body.appendChild(script);
   }, []);
 
   return (
-    <div className="relative isolate px-6 pt-2 lg:px-8 h-auto mt-20 mb-10 text-white">
-      <div
-        className="absolute inset-x-0 -top-40 -z-20 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        aria-hidden="true"
-      >
+    <div className="relative isolate w-full px-6 pt-8 pb-16 lg:px-8 text-white overflow-hidden">
+
+      {/* Background orbs */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
         <div
-          // className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#a3bedd] to-[#403f4d] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-          // style={{
-          //   clipPath:
-          //     "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-          // }}
+          className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-20"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(96,165,250,0.35) 0%, transparent 70%)",
+            filter: "blur(40px)",
+          }}
+        />
+        <div
+          className="absolute top-1/2 -right-32 w-[400px] h-[400px] rounded-full opacity-10"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(34,211,238,0.4) 0%, transparent 70%)",
+            filter: "blur(50px)",
+          }}
         />
       </div>
-      <div className="mx-auto max-w-2xl py-4 sm:py-4 lg:py-4">
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
+
+      <div className="mx-auto max-w-2xl py-8">
         <div className="text-center">
+
+          {/* TrueFocus subtitle */}
           <TrueFocus
             sentence="Software Developer"
             manualMode={true}
-            blurAmount={5}
-            borderColor="orange"
+            blurAmount={4}
+            borderColor="rgba(96,165,250,0.7)"
             animationDuration={2}
             pauseBetweenAnimations={1}
           />
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            <span className=" text-blue-400">José Germán</span>
+
+          {/* Name */}
+          <h1 className="mt-6 text-5xl font-bold tracking-tight sm:text-7xl">
+            <span className="gradient-text">José Germán</span>
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            +10 años de experiencia como desarrollador web y actualmente ayudo a estudiantes
+
+          {/* Description */}
+          <p className="mt-6 text-base leading-7 text-slate-400 max-w-lg mx-auto">
+            +10 años de experiencia como desarrollador web. Ayudo a estudiantes
             de desarrollo Full Stack en JavaScript.
           </p>
-            <h2 className="text-6xl font-bold tracking-tight text-green-400 sm:text-6xl mt-3">
-             <span ref={el} className=" text-gray-400"></span>
-           </h2>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            {/* <Link href="/projects" className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-            Ver projectos
-          </Link> */}
+
+          {/* Typed role */}
+          <div className="mt-4 h-12 flex items-center justify-center">
+            <span
+              ref={el}
+              className="text-3xl font-semibold text-slate-300"
+            />
+          </div>
+
+          {/* CTAs */}
+          <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
             <Link
               href="/cv_jose_martinez.pdf"
-              className="rounded-md bg-orange-300 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_0_24px_rgba(96,165,250,0.3)]"
+              style={{
+                background: "linear-gradient(135deg, #3b82f6, #22d3ee)",
+              }}
             >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
               Descargar CV
             </Link>
             <Link
               href="https://www.linkedin.com/newsletters/7078460407316635648/"
               target="_blank"
-              className="rounded-md bg-orange-300 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-slate-300 hover:text-white transition-all duration-200 hover:scale-[1.03]"
+              style={{
+                background: "rgba(255,255,255,0.05)",
+                border: "1px solid rgba(255,255,255,0.12)",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.borderColor = "rgba(96,165,250,0.45)";
+                (e.currentTarget as HTMLElement).style.background = "rgba(96,165,250,0.08)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.12)";
+                (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.05)";
+              }}
             >
-              Suscríbete al newsletter
+              Newsletter
             </Link>
           </div>
         </div>
       </div>
+
+      {/* Social links */}
       <Socialmedia />
     </div>
   );

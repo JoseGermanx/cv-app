@@ -5,12 +5,14 @@ import ArticleListItems from "./ArticleListItems";
 const BlogLinks = () => {
   const articles = getCategorisedArticles();
   return (
-    <div>
-      {Object.keys(articles).map((article, index) => (
-        <>
-          <ArticleListItems key={index} articles={articles[article]} />
-          <hr />
-        </>
+    <div className="flex flex-col gap-6">
+      {Object.keys(articles).map((category, index) => (
+        <div key={index}>
+          <h2 className="text-xs font-semibold tracking-widest uppercase text-slate-600 mb-2 px-4">
+            {category}
+          </h2>
+          <ArticleListItems articles={articles[category]} />
+        </div>
       ))}
     </div>
   );

@@ -2,84 +2,138 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-} */
+/* ── Design System Variables ─────────────────────────────── */
+:root {
+  --bg-base:        #07090f;
+  --bg-surface:     rgba(255, 255, 255, 0.035);
+  --bg-surface-hover: rgba(255, 255, 255, 0.065);
+  --border:         rgba(255, 255, 255, 0.075);
+  --border-hover:   rgba(99, 179, 237, 0.4);
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
+  --accent-blue:    #60a5fa;
+  --accent-cyan:    #22d3ee;
+  --accent-glow:    rgba(96, 165, 250, 0.15);
 
+  --text-primary:   #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted:     #475569;
+}
+
+/* ── Base Reset ───────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
 }
 
-/* body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-} */
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+}
 
+/* ── Custom Scrollbar ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(96, 165, 250, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(96, 165, 250, 0.55);
+}
+
+/* ── Utilities ────────────────────────────────────────────── */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+
+  .glass {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-hover {
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .glass-hover:hover {
+    background: var(--bg-surface-hover);
+    border-color: var(--border-hover);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 30px var(--accent-glow);
+  }
 }
+
+/* ── Article (Blog Posts) ─────────────────────────────────── */
 .article {
-  @apply flex flex-col gap-3 text-lg tracking-wide isolate;
+  @apply flex flex-col gap-4 text-base tracking-wide isolate;
+  color: var(--text-primary);
 }
 
 .article > h1 {
-  @apply text-4xl font-bold;
+  @apply text-4xl font-bold tracking-tight;
 }
 
 .article > h2 {
-  @apply text-3xl font-bold;
+  @apply text-2xl font-semibold tracking-tight;
+  color: var(--text-primary);
 }
 
 .article > p {
-  @apply text-justify leading-relaxed;
+  @apply leading-relaxed text-justify;
+  color: var(--text-secondary);
 }
 
 .article > img {
-  @apply w-10 h-auto;
+  @apply w-full h-auto rounded-xl;
 }
 
 .article > blockquote {
-  @apply italic border-l-4 border-gray-500 pl-4;
+  @apply italic pl-4;
+  border-left: 3px solid var(--accent-blue);
+  color: var(--text-secondary);
 }
 
 .article > ul {
   @apply list-disc list-inside;
+  color: var(--text-secondary);
 }
 
 .article > ol {
   @apply list-decimal list-inside;
+  color: var(--text-secondary);
 }
 
 .article > pre {
-  @apply p-4 bg-gray-800 rounded-lg text-gray-100 text-wrap;
+  @apply p-5 rounded-xl overflow-x-auto text-sm;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border);
+  color: #e2e8f0;
 }
 
 .article > pre > code {
   @apply block;
 }
 
+/* ── Terminal UI ─────────────────────────────────────────── */
 div.react-terminal-line {
   text-wrap: wrap;
 }
 
 div.react-terminal-wrapper {
   color: rgb(223, 223, 204);
-  font-size: small
+  font-size: small;
 }

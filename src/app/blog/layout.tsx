@@ -3,14 +3,11 @@ import NavBar from "../ui/Navbar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <>
+    <div style={{ background: "#07090f", minHeight: "100vh" }}>
       <NavBar />
-      <div className="">
-        <div className="w-full flex-none md:w-64"></div>
-        <div className="flex-grow md:pt-12">
-          {children}
-        </div>
+      <div className="pt-16">
+        {children}
       </div>
-    </>
+    </div>
   );
 }

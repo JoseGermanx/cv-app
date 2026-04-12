@@ -10,8 +10,8 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <div className="flex min-h-screen flex-col items-center justify-between p-3 mt-16">
-        <h1 className="text-5xl font-bold tracking-tight text-gray-900 text-center mb-5">
+      <div className="mx-auto max-w-2xl px-6 py-16 text-white">
+        <h1 className="text-4xl font-bold tracking-tight gradient-text inline-block mb-10">
           Blog
         </h1>
         <BlogLinks />
