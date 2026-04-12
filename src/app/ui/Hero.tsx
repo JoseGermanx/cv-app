@@ -84,16 +84,18 @@ const Hero = () => {
           {/* CTAs */}
           <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
             <Link
-              href="/cv_jose_martinez.pdf"
+              href="https://links.betacode.cl/"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_0_24px_rgba(96,165,250,0.3)]"
               style={{
                 background: "linear-gradient(135deg, #3b82f6, #22d3ee)",
               }}
+              target="_blank"
             >
               <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                <path d="M11 3a1 1 0 100 2h3.586L9.293 9.293a1 1 0 101.414 1.414L16 6.414V10a1 1 0 102 0V4a1 1 0 00-1-1h-6z" />
+                <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
               </svg>
-              Descargar CV
+              Links de interés
             </Link>
             <Link
               href="https://www.linkedin.com/newsletters/7078460407316635648/"
