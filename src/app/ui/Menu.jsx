@@ -8,9 +8,11 @@ import {
 } from '@heroicons/react/24/outline'
 
 const solutions = [
-  { name: 'JGx Agency — React', description: 'Sitio web para agencia de marketing desarrollado con React 18.', href: 'https://agency.betacode.cl', icon: ChartPieIcon },
+  { name: 'Habits Tracker', description: 'Apliación para el seguimiento de hábitos.', href: 'https://habits.betacode.cl', icon: ChartPieIcon },
   { name: 'AI Chat Learning Assistant', description: 'Aplicación Chat de IA creada con Google Gemini y React.', href: 'https://asistente-js.vercel.app/', icon: SparklesIcon },
   { name: 'Star Wars API UI — React', description: 'Consumo de API con Context API, enrutado y datos locales.', href: 'https://star-wars-blog-chi.vercel.app/', icon: ArrowsPointingInIcon },
+  { name: 'Code Tickets', description: 'Gestión de tickets para ingreso a eventos con sistema de qr.', href: 'https://codeticket.betacode.cl/', icon: ArrowsPointingInIcon },
+  { name: 'Post It', description: 'Aplicación de notas adhesivas en línea.', href: 'https://post-it.jgxdev.com/', icon: ArrowsPointingInIcon },
 ]
 
 const callsToAction = [
