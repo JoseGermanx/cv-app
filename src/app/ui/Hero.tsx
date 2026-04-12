@@ -70,8 +70,7 @@ const Hero = () => {
 
           {/* Description */}
           <p className="mt-6 text-base leading-7 text-slate-400 max-w-lg mx-auto">
-            +10 años de experiencia como desarrollador web. Ayudo a estudiantes
-            de desarrollo Full Stack en JavaScript.
+            +15 años de experiencia como desarrollador web Full Stack en JavaScript.
           </p>
 
           {/* Typed role */}

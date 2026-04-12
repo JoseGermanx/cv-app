@@ -3,20 +3,24 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="relative isolate px-6 pt-2 lg:px-8 h-auto mt-20 mb-10 text-white"
+    class="relative isolate w-full px-6 pt-8 pb-16 lg:px-8 text-white overflow-hidden"
   >
     <div
       aria-hidden="true"
-      class="absolute inset-x-0 -top-40 -z-20 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-    >
-      <div />
-    </div>
-    <div
-      class="mx-auto max-w-2xl py-4 sm:py-4 lg:py-4"
+      class="pointer-events-none absolute inset-0 -z-10"
     >
       <div
-        class="hidden sm:mb-8 sm:flex sm:justify-center"
+        class="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-20"
+        style="filter: blur(40px);"
       />
+      <div
+        class="absolute top-1/2 -right-32 w-[400px] h-[400px] rounded-full opacity-10"
+        style="filter: blur(50px);"
+      />
+    </div>
+    <div
+      class="mx-auto max-w-2xl py-8"
+    >
       <div
         class="text-center"
       >
@@ -25,19 +29,19 @@ exports[`renders homepage unchanged 1`] = `
         >
           <span
             class="focus-word manual "
-            style="filter: blur(0px); --border-color: orange; --glow-color: rgba(0, 255, 0, 0.6); transition: filter 2s ease;"
+            style="filter: blur(0px); --border-color: rgba(96,165,250,0.7); --glow-color: rgba(0, 255, 0, 0.6); transition: filter 2s ease;"
           >
             Software
           </span>
           <span
             class="focus-word manual "
-            style="filter: blur(5px); --border-color: orange; --glow-color: rgba(0, 255, 0, 0.6); transition: filter 2s ease;"
+            style="filter: blur(4px); --border-color: rgba(96,165,250,0.7); --glow-color: rgba(0, 255, 0, 0.6); transition: filter 2s ease;"
           >
             Developer
           </span>
           <div
             class="focus-frame"
-            style="--border-color: orange; --glow-color: rgba(0, 255, 0, 0.6);"
+            style="--border-color: rgba(96,165,250,0.7); --glow-color: rgba(0, 255, 0, 0.6);"
           >
             <span
               class="corner top-left"
@@ -54,24 +58,24 @@ exports[`renders homepage unchanged 1`] = `
           </div>
         </div>
         <h1
-          class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+          class="mt-6 text-5xl font-bold tracking-tight sm:text-7xl"
         >
           <span
-            class=" text-blue-400"
+            class="gradient-text"
           >
             José Germán
           </span>
         </h1>
         <p
-          class="mt-6 text-lg leading-8 text-gray-600"
+          class="mt-6 text-base leading-7 text-slate-400 max-w-lg mx-auto"
         >
-          +10 años de experiencia como desarrollador web y actualmente ayudo a estudiantes de desarrollo Full Stack en JavaScript.
+          +15 años de experiencia como desarrollador web Full Stack en JavaScript.
         </p>
-        <h2
-          class="text-6xl font-bold tracking-tight text-green-400 sm:text-6xl mt-3"
+        <div
+          class="mt-4 h-12 flex items-center justify-center"
         >
           <span
-            class=" text-gray-400"
+            class="text-3xl font-semibold text-slate-300"
           />
           <span
             aria-hidden="true"
@@ -79,91 +83,82 @@ exports[`renders homepage unchanged 1`] = `
           >
             |
           </span>
-        </h2>
+        </div>
         <div
-          class="mt-10 flex items-center justify-center gap-x-6"
+          class="mt-8 flex items-center justify-center gap-4 flex-wrap"
         >
           <a
-            class="rounded-md bg-orange-300 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_0_24px_rgba(96,165,250,0.3)]"
             href="/cv_jose_martinez.pdf"
           >
+            <svg
+              class="h-4 w-4"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                fill-rule="evenodd"
+              />
+            </svg>
             Descargar CV
           </a>
           <a
-            class="rounded-md bg-orange-300 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-orange-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-400"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-slate-300 hover:text-white transition-all duration-200 hover:scale-[1.03]"
             href="https://www.linkedin.com/newsletters/7078460407316635648/"
+            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.12);"
             target="_blank"
           >
-            Suscríbete al newsletter
+            Newsletter
           </a>
         </div>
       </div>
     </div>
-    <div>
-      <div
-        class="flex-col mt-9"
+    <div
+      class="flex justify-center gap-4 mt-8"
+    >
+      <a
+        class="group flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200"
+        href="https://www.github.com/josegermanx/"
+        rel="noopener noreferrer"
+        style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1);"
+        target="_blank"
+        title="GitHub"
       >
-        <div
-          class="flex justify-center"
-        >
-          <div
-            class="group relative"
-          >
-            <div
-              class="aspect-h-1 aspect-w-1 w-full overflow-hidden group-hover:opacity-75 lg:h-auto mx-4"
-            >
-              <img
-                alt="GitHub"
-                class=" h-5 w-5 object-cover object-center lg:h-10 lg:w-10"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/images/github.svg"
-                style="color: transparent;"
-                width="40"
-              />
-              <a
-                href="https://www.github.com/josegermanx/"
-                target="_blank"
-              >
-                <span
-                  aria-hidden="true"
-                  class="absolute inset-0"
-                />
-              </a>
-            </div>
-          </div>
-          <div
-            class="group relative"
-          >
-            <div
-              class="aspect-h-1 aspect-w-1 w-full overflow-hidden group-hover:opacity-75 lg:h-auto mx-4"
-            >
-              <img
-                alt="LinkedInd"
-                class=" h-5 w-5 object-cover object-center lg:h-10 lg:w-10"
-                data-nimg="1"
-                decoding="async"
-                height="40"
-                loading="lazy"
-                src="/images/linkedin.svg"
-                style="color: transparent;"
-                width="40"
-              />
-              <a
-                href="https://www.linkedin.com/in/josegermanx/"
-                target="_blank"
-              >
-                <span
-                  aria-hidden="true"
-                  class="absolute inset-0"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+        <img
+          alt="GitHub"
+          class="opacity-60 group-hover:opacity-100 transition-opacity invert"
+          data-nimg="1"
+          decoding="async"
+          height="18"
+          loading="lazy"
+          src="/images/github.svg"
+          style="color: transparent;"
+          width="18"
+        />
+      </a>
+      <a
+        class="group flex items-center justify-center w-10 h-10 rounded-full transition-all duration-200"
+        href="https://www.linkedin.com/in/josegermanx/"
+        rel="noopener noreferrer"
+        style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255,255,255,0.1);"
+        target="_blank"
+        title="LinkedIn"
+      >
+        <img
+          alt="LinkedIn"
+          class="opacity-60 group-hover:opacity-100 transition-opacity invert"
+          data-nimg="1"
+          decoding="async"
+          height="18"
+          loading="lazy"
+          src="/images/linkedin.svg"
+          style="color: transparent;"
+          width="18"
+        />
+      </a>
     </div>
   </div>
 </div>

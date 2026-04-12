@@ -15,12 +15,6 @@ describe("Page", () => {
     expect(heading).toHaveTextContent("José Germán");
   });
 
-  it("renders a subheading", () => {
-    render(<Hero />);
-    const subheading = screen.getByRole("heading", { level: 2 });
-    expect(subheading).toBeInTheDocument();
-  });
-
   //testear que exita al menos una fracción de cadena de texto dentro de un parrafo del documento getByText
   it("renders a paragraph with the correct text", () => {
     render(<Hero />);
