@@ -11,7 +11,9 @@ interface Video {
 }
 
 const videos: Video[] = [
-  { id: 1,  videoId: 'yykGfNJHBPc', title: '🚀 Aprendiendo React Router como un Framework', channel: 'React', category: 'Frontend' },
+  { id: 1,  videoId: 'yykGfNJHBPc', title: '🚀 Aprendiendo React Router como un Framework Parte 1', channel: 'React', category: 'Frontend' },
+  { id: 2,  videoId: 'SMIul7Aolnk', title: '🚀 Aprendiendo React Router como un Framework Parte 2', channel: 'React', category: 'Frontend' },
+  { id: 3,  videoId: 'UVUhZUx-OtE', title: '🚀 Aprendiendo React Router como un Framework Parte 3', channel: 'React', category: 'Frontend' },
 ];
 
 const categoryAccent: Record<string, string> = {
