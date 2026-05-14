@@ -55,7 +55,7 @@ const LinksInteres = () => {
         <div  className="article-list mt-3">
         {LinksDeInteres.map((link) => (
           <li key={link.id} className="rounded hover:bg-gray-300 p-2">
-            <Link className="p-2 mt-2" href={link.path} target="_blanck">
+            <Link className="p-2 mt-2" href={`/links/${link.namebetacode}`} target="_blanck">
               {link.name}
             </Link>
           </li>
