@@ -4,6 +4,7 @@ import NavBar from "./ui/Navbar";
 import Hero from "./ui/Hero";
 import Footer from "./ui/Footer";
 import TechStack from "./ui/TechStack";
+import YoutubeReview from "./ui/YoutubeReview";
 import Contact from "./ui/Contact";
 
 export default function Home() {
@@ -20,6 +21,14 @@ export default function Home() {
           }}
         />
         <TechStack />
+        <div
+          className="w-full max-w-4xl mx-auto"
+          style={{
+            height: "1px",
+            background: "linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent)",
+          }}
+        />
+        <YoutubeReview />
         <div
           className="w-full max-w-4xl mx-auto"
           style={{
