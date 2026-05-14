@@ -13,6 +13,7 @@ const solutions = [
   { name: 'Star Wars API UI — React', description: 'Consumo de API con Context API, enrutado y datos locales.', href: 'https://star-wars-blog-chi.vercel.app/', icon: ArrowsPointingInIcon },
   { name: 'Code Tickets', description: 'Gestión de tickets para ingreso a eventos con sistema de qr.', href: 'https://codeticket.betacode.cl/', icon: ArrowsPointingInIcon },
   { name: 'Post It', description: 'Aplicación de notas adhesivas en línea.', href: 'https://post-it.jgxdev.com/', icon: ArrowsPointingInIcon },
+  { name: 'Pic of a Day', description: 'Imagen del día, de la NASA, con React y consumo de API.', href: 'https://pic.jgxdev.com/', icon: ArrowsPointingInIcon },
 ]
 
 const callsToAction = [
