@@ -45,6 +45,13 @@ export const LinksDeInteres = [
     path: "https://web.dev/learn/javascript",
     category: "Software Development",
     namebetacode: "googlejs",
+  },
+  {
+    id: 7,
+    name: "Asistente de Estudio de JS",
+    path: "https://asistente-js.betacode.cl/",
+    category: "Software Development",
+    namebetacode: "asistentejs", 
   }
 ];
 
