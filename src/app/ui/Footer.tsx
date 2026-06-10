@@ -51,6 +51,27 @@ const Footer = () => {
             className="opacity-50 hover:opacity-80 transition-opacity"
           />
         </div>
+        <div className="mt-3">
+          <a
+            href="https://github.com/JoseGermanx/feedback/issues/new?title=%5BBug%5D%20"
+            className="text-slate-700 hover:text-red-400 transition-colors text-xs inline-flex items-center gap-1 mx-auto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M8 2l1.5 1.5"/>
+              <path d="M14.5 3.5L16 2"/>
+              <path d="M9 7.5A3 3 0 0 1 15 7.5"/>
+              <path d="M6.5 10a5.5 5.5 0 0 0 11 0v4a5.5 5.5 0 0 1-11 0v-4z"/>
+              <path d="M3 11h3"/>
+              <path d="M18 11h3"/>
+              <path d="M3 17l2.5-1.5"/>
+              <path d="M18.5 15.5L21 17"/>
+              <path d="M12 19v3"/>
+            </svg>
+            Reportar un error
+          </a>
+        </div>
       </div>
     </footer>
   )
