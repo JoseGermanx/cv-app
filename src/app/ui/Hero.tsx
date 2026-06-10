@@ -84,7 +84,7 @@ const Hero = () => {
           {/* CTAs */}
           <div className="mt-8 flex items-center justify-center gap-4 flex-wrap">
             <Link
-              href="https://links.betacode.cl/"
+              href="https://links.jgxdev.com/"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-all duration-200 hover:scale-[1.03] hover:shadow-[0_0_24px_rgba(96,165,250,0.3)]"
               style={{
                 background: "linear-gradient(135deg, #3b82f6, #22d3ee)",
