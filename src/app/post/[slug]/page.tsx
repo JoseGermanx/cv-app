@@ -28,21 +28,23 @@ const Article = async ({ params }: { params: { slug: string } }) => {
     <>
       <div>
         <NavBar />
-        <div className="flex md:w-64 mb-5 mx-20 mt-16">
-          <Link href="/blog">
-            <ArrowLeftIcon className="h-6 w-6" />
-            <p>back</p>
+        <div className="mx-auto max-w-2xl px-6 pt-20 pb-24">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-slate-200 transition-colors mb-10"
+          >
+            <ArrowLeftIcon className="h-4 w-4" />
+            Volver al blog
           </Link>
-        </div>
-        <br />
-        <div className="mx-10 sm:mx-20">
-          <div>
-            <h1 className="text-4xl font-bold ">{articleData.title}</h1>
-          </div>
-          <p className="">{articleData.date}</p>
-        </div>
-        <hr />
-        <div className="mt-8 mx-10 p-15 sm:px-25 pb-10">
+
+          <header className="mb-10">
+            <h1 className="text-3xl font-bold tracking-tight text-slate-100 leading-snug mb-3">
+              {articleData.title}
+            </h1>
+            <p className="text-sm text-slate-500">{articleData.date}</p>
+            <hr className="mt-8 border-white/[0.07]" />
+          </header>
+
           <div
             className="article"
             dangerouslySetInnerHTML={{ __html: articleData.contentHtml }}

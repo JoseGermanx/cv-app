@@ -14,21 +14,12 @@ const ArticleListItems = ({ articles }: Props) => {
                 <Link
                     key={index}
                     href={`/post/${article.id}`}
-                    className="group flex flex-col gap-0.5 px-4 py-3 rounded-xl transition-all duration-200"
-                    style={{ border: "1px solid transparent" }}
-                    onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)";
-                        (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.07)";
-                    }}
-                    onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.background = "transparent";
-                        (e.currentTarget as HTMLElement).style.borderColor = "transparent";
-                    }}
+                    className="group flex items-baseline justify-between gap-4 px-1 py-3 border-b border-white/[0.05] last:border-0 transition-colors duration-150 hover:bg-white/[0.03] rounded-lg px-3"
                 >
-                    <span className="text-slate-200 group-hover:text-white text-sm font-medium transition-colors">
+                    <span className="text-slate-300 group-hover:text-white text-[15px] font-medium leading-snug transition-colors">
                         {article.title}
                     </span>
-                    <span className="text-xs text-slate-600">{article.date}</span>
+                    <span className="shrink-0 text-xs text-slate-600 tabular-nums">{article.date}</span>
                 </Link>
             ))}
         </div>

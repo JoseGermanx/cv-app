@@ -79,53 +79,82 @@ body {
 
 /* ── Article (Blog Posts) ─────────────────────────────────── */
 .article {
-  @apply flex flex-col gap-4 text-base tracking-wide isolate;
+  @apply flex flex-col gap-6 isolate;
   color: var(--text-primary);
+  font-size: 1.0625rem;
+  line-height: 1.85;
 }
 
 .article > h1 {
-  @apply text-4xl font-bold tracking-tight;
+  @apply text-3xl font-bold tracking-tight mt-4;
+  color: var(--text-primary);
 }
 
 .article > h2 {
-  @apply text-2xl font-semibold tracking-tight;
+  @apply text-xl font-semibold tracking-tight mt-6 mb-1;
+  color: var(--text-primary);
+}
+
+.article > h3 {
+  @apply text-lg font-semibold tracking-tight mt-4 mb-1;
   color: var(--text-primary);
 }
 
 .article > p {
-  @apply leading-relaxed text-justify;
+  @apply leading-[1.85];
   color: var(--text-secondary);
 }
 
+.article > p > code {
+  @apply px-1.5 py-0.5 rounded text-sm font-mono;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--accent-cyan);
+}
+
 .article > img {
-  @apply w-full h-auto rounded-xl;
+  @apply w-full h-auto rounded-xl my-2;
 }
 
 .article > blockquote {
-  @apply italic pl-4;
+  @apply italic pl-5 py-1 rounded-r-lg my-2;
   border-left: 3px solid var(--accent-blue);
+  background: rgba(96, 165, 250, 0.04);
   color: var(--text-secondary);
 }
 
 .article > ul {
-  @apply list-disc list-inside;
+  @apply list-disc pl-5 flex flex-col gap-1;
   color: var(--text-secondary);
 }
 
 .article > ol {
-  @apply list-decimal list-inside;
+  @apply list-decimal pl-5 flex flex-col gap-1;
   color: var(--text-secondary);
 }
 
 .article > pre {
-  @apply p-5 rounded-xl overflow-x-auto text-sm;
+  @apply p-5 rounded-xl overflow-x-auto text-sm my-2;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
-  color: #e2e8f0;
+  color: #cbd5e1;
+  font-size: 0.875rem;
+  line-height: 1.7;
 }
 
 .article > pre > code {
-  @apply block;
+  @apply block font-mono;
+}
+
+.article > a,
+.article p > a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+.article > a:hover,
+.article p > a:hover {
+  color: var(--accent-cyan);
 }
 
 /* ── Terminal UI ─────────────────────────────────────────── */

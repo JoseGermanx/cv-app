@@ -10,10 +10,11 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <div className="mx-auto max-w-2xl px-6 py-16 text-white">
-        <h1 className="text-4xl font-bold tracking-tight gradient-text inline-block mb-10">
+      <div className="mx-auto max-w-2xl px-6 py-20 text-white">
+        <h1 className="text-3xl font-bold tracking-tight gradient-text inline-block mb-2">
           Blog
         </h1>
+        <p className="text-slate-500 text-sm mb-12">Notas, tutoriales y reflexiones sobre desarrollo.</p>
         <BlogLinks />
       </div>
       <Footer />
