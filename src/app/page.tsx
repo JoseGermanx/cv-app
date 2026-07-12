@@ -5,6 +5,7 @@ import Hero from "./ui/Hero";
 import Footer from "./ui/Footer";
 import TechStack from "./ui/TechStack";
 import YoutubeReview from "./ui/YoutubeReview";
+import TwitchReview from "./ui/TwitchReview";
 import Contact from "./ui/Contact";
 
 export default function Home() {
@@ -29,6 +30,14 @@ export default function Home() {
           }}
         />
         <YoutubeReview />
+        <div
+          className="w-full max-w-4xl mx-auto"
+          style={{
+            height: "1px",
+            background: "linear-gradient(to right, transparent, rgba(255,255,255,0.08), transparent)",
+          }}
+        />
+        <TwitchReview />
         <div
           className="w-full max-w-4xl mx-auto"
           style={{
