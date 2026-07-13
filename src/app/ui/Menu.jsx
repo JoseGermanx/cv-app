@@ -1,19 +1,7 @@
 import { Fragment } from 'react'
 import { Popover, PopoverButton, PopoverPanel, Transition } from '@headlessui/react'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import {
-  ChartPieIcon,
-  SparklesIcon,
-  ArrowsPointingInIcon,
-} from '@heroicons/react/24/outline'
-
-const solutions = [
-  { name: 'Habits Tracker', description: 'Apliación para el seguimiento de hábitos.', href: 'https://habitos.click', icon: ChartPieIcon },
-  { name: 'AI Chat Learning Assistant', description: 'Aplicación Chat de IA creada con Google Gemini y React.', href: 'https://asistente-js.betacode.cl/', icon: SparklesIcon },
-  { name: 'Code Tickets', description: 'Gestión de tickets para ingreso a eventos con sistema de qr.', href: 'https://codetickets.fun/', icon: ArrowsPointingInIcon },
-  { name: 'Post It', description: 'Aplicación de notas adhesivas en línea.', href: 'https://post-it.jgxdev.com/', icon: ArrowsPointingInIcon },
-  { name: 'Pic of a Day', description: 'Imagen del día, de la NASA, con React y consumo de API.', href: 'https://pic.jgxdev.com/', icon: ArrowsPointingInIcon },
-]
+import { projects as solutions } from '../lib/projects'
 
 const callsToAction = [
   { name: 'YouTube', href: 'https://www.youtube.com/channel/UCUVOMdP_TiQJY3cZk6HGd9A', icon: PlayCircleIcon, color: 'text-red-400' },
