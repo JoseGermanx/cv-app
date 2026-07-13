@@ -5,7 +5,7 @@ const NavBarBottom = () => {
   const links = [
     { label: 'Inicio', href: '/' },
     { label: 'Blog', href: '/blog' },
-    { label: 'CV', href: '/cv_jose_martinez.pdf' },
+    { label: 'Proyectos', href: '/projects' },
     { label: 'Agenda una clase', href: 'https://www.superprof.cl/aprende-javascript-transforma-carrera-tecnologia-soy-graduado-ingenieria-puedo-ayudar-dar-pasos-firmes-este.html', external: true },
     { label: 'Newsletter', href: 'https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7078460407316635648', external: true },
   ]
