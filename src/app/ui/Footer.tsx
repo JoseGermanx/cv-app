@@ -13,7 +13,7 @@ const Footer = () => {
         <p className="text-slate-600 text-sm flex items-center justify-center gap-1.5 flex-wrap">
           Hecho con{" "}
           <Image
-            src="https://simpleicons.org/icons/nextdotjs.svg"
+            src="https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/nextdotjs.svg"
             alt="Next.js"
             width={13}
             height={13}
@@ -44,11 +44,11 @@ const Footer = () => {
             dev.to/josegermanx
           </a>
           <Image
-            src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg"
+            src="https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/devdotto.svg"
             alt="dev.to"
             width={18}
             height={18}
-            className="opacity-50 hover:opacity-80 transition-opacity"
+            className="invert opacity-50 hover:opacity-80 transition-opacity"
           />
         </div>
         <div className="mt-3">
