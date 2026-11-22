@@ -7,8 +7,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function LinkPage({ params }: { params: { id: string } }) {
-  const link = LinksDeInteres.find((link) => link.namebetacode === params.id);
+export default async function LinkPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const link = LinksDeInteres.find((link) => link.namebetacode === id);
 
   if (link) {
     redirect(link.path);
