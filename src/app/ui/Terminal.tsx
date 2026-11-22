@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 "use client";
 import Link from "next/link";
-import React, { useState, useMemo, useEffect, useCallback } from "react";
+import React, { useState, useMemo, useCallback } from "react";
 import Terminal, {
   ColorMode,
   TerminalOutput,
@@ -33,10 +33,6 @@ const TerminalController = (props = {}) => {
   // Terminal has 100% width by default so it should usually be wrapped in a container div
 
   //   const [terminalInputValue, setTerminalInputValue] = useState("");
-
-  useEffect(() => {
-    setTerminalLineData(initialState);
-  }, [initialState]);
 
   const onInput = (input: string) => {
     let ld = [...terminalLineData];

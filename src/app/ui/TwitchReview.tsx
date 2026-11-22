@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useSyncExternalStore } from 'react';
 
 interface TwitchVideo {
   id: number;
@@ -13,15 +13,13 @@ const videos: TwitchVideo[] = [
   { id: 1, videoId: '2816590445', title: '🍅 Pomodoro en vivo: sesión de código', category: 'Pomodoro' },
 ];
 
+const noopSubscribe = () => () => {};
+
 export default function TwitchReview() {
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [parent, setParent] = useState<string>('');
+  const parent = useSyncExternalStore(noopSubscribe, () => window.location.hostname, () => '');
 
   const close = useCallback(() => setActiveId(null), []);
-
-  useEffect(() => {
-    setParent(window.location.hostname);
-  }, []);
 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {

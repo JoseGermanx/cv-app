@@ -1,43 +1,40 @@
 'use client'
 
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Menu from "./Menu";
 import useScroll from "../lib/hooks/use-scroll";
 
+const noopSubscribe = () => () => {};
+
+const isMobileDevice = () =>
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+
 const NavBar = () => {
-  const [notificaciones, setNotificaciones] = useState(false);
-  const [mobile, setMobile] = useState(false);
+  const [notificacionesActivadas, setNotificacionesActivadas] = useState(false);
+  const mobile = useSyncExternalStore(noopSubscribe, isMobileDevice, () => false);
+  const permisoConcedido = useSyncExternalStore(
+    noopSubscribe,
+    () => typeof Notification !== "undefined" && Notification.permission === "granted",
+    () => false
+  );
+  const notificaciones = notificacionesActivadas || permisoConcedido;
   const scrolled = useScroll(50);
 
   const notificar = () => {
     if (Notification.permission === "granted") {
-      setNotificaciones(true);
+      setNotificacionesActivadas(true);
     } else {
       Notification.requestPermission().then(() => {
-        setNotificaciones(true);
+        setNotificacionesActivadas(true);
       });
     }
   };
 
   useEffect(() => {
-    if (
-      navigator.userAgent.match(/Android/i) ||
-      navigator.userAgent.match(/webOS/i) ||
-      navigator.userAgent.match(/iPhone/i) ||
-      navigator.userAgent.match(/iPad/i) ||
-      navigator.userAgent.match(/iPod/i) ||
-      navigator.userAgent.match(/BlackBerry/i) ||
-      navigator.userAgent.match(/Windows Phone/i)
-    ) {
-      setMobile(true);
-      return;
-    }
-    if (Notification.permission === "granted") {
-      setNotificaciones(true);
-    }
-    if (window.location.pathname === "/" && !notificaciones) {
+    if (isMobileDevice()) return;
+    if (window.location.pathname === "/") {
       const notificaction = new Notification("Newsletter", {
         body: "Sigue mi newsletter en LinkedIn",
         icon: "https://jgxdev.com/favicon.ico",
@@ -46,7 +43,7 @@ const NavBar = () => {
         window.open("https://www.linkedin.com/newsletters/7078460407316635648");
       };
     }
-  }, [notificaciones]);
+  }, []);
 
   return (
     <nav className="z-50 top-0 text-white">
