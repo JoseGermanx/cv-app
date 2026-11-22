@@ -24,6 +24,13 @@ export const tecnologies = [
     { id: 13, name: 'Jest',        imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/jest.svg",            focus: "DevOps" },
     { id: 28, name: 'Git',         imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/git.svg",             focus: "DevOps" },
     { id: 29, name: 'GitHub',      imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/github.svg",          focus: "DevOps" },
+    { id: 30, name: 'Google ADK',  imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/google.svg", focus: "AI Agents" },
+    { id: 31, name: 'Gemini',      imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/googlegemini.svg", focus: "AI Agents" },
+    { id: 32, name: 'Claude',      imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/claude.svg", focus: "AI Agents" },
+    { id: 35, name: 'MCP',         imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/modelcontextprotocol.svg", focus: "AI Agents" },
+    { id: 36, name: 'Hugging Face', imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/huggingface.svg", focus: "AI Agents" },
+    { id: 37, name: 'Ollama',      imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/ollama.svg", focus: "AI Agents" },
+    { id: 38, name: 'n8n',         imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/n8n.svg", focus: "AI Agents" },
 ]
 
 const categoryAccent: Record<string, string> = {
@@ -31,6 +38,7 @@ const categoryAccent: Record<string, string> = {
   Backend:     "rgba(34,211,238,0.7)",   // cyan
   Programming: "rgba(167,139,250,0.7)",  // purple
   DevOps:      "rgba(52,211,153,0.7)",   // emerald
+  "AI Agents": "rgba(244,114,182,0.7)",  // pink
 }
 
 const TechStack = () => {
@@ -46,7 +54,7 @@ const TechStack = () => {
             </div>
 
             <div className="flex flex-col gap-6">
-                {["Frontend", "Backend", "Programming", "DevOps"].map((focus) => (
+                {["Frontend", "Backend", "Programming", "DevOps", "AI Agents"].map((focus) => (
                     <div
                         key={focus}
                         className="rounded-2xl p-6"
