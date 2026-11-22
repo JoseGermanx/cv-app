@@ -20,6 +20,12 @@ const nextConfig = {
             hostname: 'res.cloudinary.com',
             port: '',
             pathname: '/dh6ipg8bj/image/upload/v1701278366/parking-resercar-app/**',
+          },
+          {
+            protocol: 'https',
+            hostname: 'cdn.jsdelivr.net',
+            port: '',
+            pathname: '/npm/simple-icons@*/icons/**',
           }
         ],
       },

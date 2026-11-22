@@ -3,27 +3,27 @@
 import Image from "next/image"
 
 export const tecnologies = [
-    { id: 1,  name: 'React',       imageLogo: "https://simpleicons.org/icons/react.svg",          focus: "Frontend" },
-    { id: 2,  name: 'Next.js',     imageLogo: "https://simpleicons.org/icons/nextdotjs.svg",       focus: "Frontend" },
-    { id: 3,  name: 'Tailwind CSS',imageLogo: "https://simpleicons.org/icons/tailwindcss.svg",     focus: "Frontend" },
-    { id: 22, name: 'HTML5',       imageLogo: "https://simpleicons.org/icons/html5.svg",           focus: "Frontend" },
-    { id: 23, name: 'CSS3',        imageLogo: "https://simpleicons.org/icons/css.svg",            focus: "Frontend" },
-    { id: 26, name: 'Redux',       imageLogo: "https://simpleicons.org/icons/redux.svg",           focus: "Frontend" },
-    { id: 27, name: 'Astro',       imageLogo: "https://simpleicons.org/icons/astro.svg",           focus: "Frontend" },
-    { id: 4,  name: 'Node.js',     imageLogo: "https://simpleicons.org/icons/nodedotjs.svg",       focus: "Backend" },
-    { id: 5,  name: 'Express.js',  imageLogo: "https://simpleicons.org/icons/express.svg",        focus: "Backend" },
-    { id: 6,  name: 'MongoDB',     imageLogo: "https://simpleicons.org/icons/mongodb.svg",         focus: "Backend" },
-    { id: 7,  name: 'PostgreSQL',  imageLogo: "https://simpleicons.org/icons/postgresql.svg",     focus: "Backend" },
-    { id: 16, name: 'Flask',       imageLogo: "https://simpleicons.org/icons/flask.svg",           focus: "Backend" },
-    { id: 18, name: 'MySQL',       imageLogo: "https://simpleicons.org/icons/mysql.svg",           focus: "Backend" },
-    { id: 19, name: 'TypeScript',  imageLogo: "https://simpleicons.org/icons/typescript.svg",     focus: "Programming" },
-    { id: 24, name: 'JavaScript',  imageLogo: "https://simpleicons.org/icons/javascript.svg",     focus: "Programming" },
-    { id: 20, name: 'Python',      imageLogo: "https://simpleicons.org/icons/python.svg",          focus: "Programming" },
-    { id: 10, name: 'Google Cloud',         imageLogo: "https://simpleicons.org/icons/googlecloud.svg", focus: "DevOps" },
-    { id: 12, name: 'Docker',      imageLogo: "https://simpleicons.org/icons/docker.svg",          focus: "DevOps" },
-    { id: 13, name: 'Jest',        imageLogo: "https://simpleicons.org/icons/jest.svg",            focus: "DevOps" },
-    { id: 28, name: 'Git',         imageLogo: "https://simpleicons.org/icons/git.svg",             focus: "DevOps" },
-    { id: 29, name: 'GitHub',      imageLogo: "https://simpleicons.org/icons/github.svg",          focus: "DevOps" },
+    { id: 1,  name: 'React',       imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/react.svg",          focus: "Frontend" },
+    { id: 2,  name: 'Next.js',     imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/nextdotjs.svg",       focus: "Frontend" },
+    { id: 3,  name: 'Tailwind CSS',imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/tailwindcss.svg",     focus: "Frontend" },
+    { id: 22, name: 'HTML5',       imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/html5.svg",           focus: "Frontend" },
+    { id: 23, name: 'CSS3',        imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/css.svg",            focus: "Frontend" },
+    { id: 26, name: 'Redux',       imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/redux.svg",           focus: "Frontend" },
+    { id: 27, name: 'Astro',       imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/astro.svg",           focus: "Frontend" },
+    { id: 4,  name: 'Node.js',     imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/nodedotjs.svg",       focus: "Backend" },
+    { id: 5,  name: 'Express.js',  imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/express.svg",        focus: "Backend" },
+    { id: 6,  name: 'MongoDB',     imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/mongodb.svg",         focus: "Backend" },
+    { id: 7,  name: 'PostgreSQL',  imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/postgresql.svg",     focus: "Backend" },
+    { id: 16, name: 'Flask',       imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/flask.svg",           focus: "Backend" },
+    { id: 18, name: 'MySQL',       imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/mysql.svg",           focus: "Backend" },
+    { id: 19, name: 'TypeScript',  imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/typescript.svg",     focus: "Programming" },
+    { id: 24, name: 'JavaScript',  imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/javascript.svg",     focus: "Programming" },
+    { id: 20, name: 'Python',      imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/python.svg",          focus: "Programming" },
+    { id: 10, name: 'Google Cloud',         imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/googlecloud.svg", focus: "DevOps" },
+    { id: 12, name: 'Docker',      imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/docker.svg",          focus: "DevOps" },
+    { id: 13, name: 'Jest',        imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/jest.svg",            focus: "DevOps" },
+    { id: 28, name: 'Git',         imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/git.svg",             focus: "DevOps" },
+    { id: 29, name: 'GitHub',      imageLogo: "https://cdn.jsdelivr.net/npm/simple-icons@16.38.0/icons/github.svg",          focus: "DevOps" },
 ]
 
 const categoryAccent: Record<string, string> = {
@@ -90,6 +90,7 @@ const TechStack = () => {
                                             alt={tech.name}
                                             width={28}
                                             height={28}
+                                            unoptimized
                                             className="transition-transform duration-200 group-hover:scale-110 invert opacity-75 group-hover:opacity-100"
                                         />
                                         <span className="text-[10px] text-slate-500 group-hover:text-slate-300 transition-colors text-center leading-tight">
