@@ -15,6 +15,7 @@ const videos: Video[] = [
   { id: 2,  videoId: 'SMIul7Aolnk', title: '🚀 Aprendiendo React Router como un Framework Parte 2', channel: 'React', category: 'Frontend' },
   { id: 3,  videoId: 'UVUhZUx-OtE', title: '🚀 Aprendiendo React Router como un Framework Parte 3', channel: 'React', category: 'Frontend' },
   { id: 4,  videoId: 'LxqgFK3azKg', title: '🚀 El fin del Spec-Driven Development con IA', channel: 'Dev', category: 'Dev' },
+  { id: 5,  videoId: 'wBZnf7CAxpA', title: '🚀 Cómo desarrollar software con IA el ciclo de Anthropic paso a paso', channel: 'Dev', category: 'Dev' },
 ];
 
 const categoryAccent: Record<string, string> = {
